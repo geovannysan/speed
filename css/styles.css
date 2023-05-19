@@ -6,17 +6,28 @@
 }
 
 .bg-header{
-    background: url(../img/back-speed.jpg);
+    background: url(../img/FONDO.jpg);
     background-size: cover;
     background-position: center;
     clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
+    /* sin fixed talves se vea mejor */
     background-attachment: fixed;
 }
 
 
-
+.cursor{
+    cursor: pointer;
+}
 .bg-speed{
+    
+    
     background:var(--bs-morado) ;
+    clip-path: polygon(0% 0%, 100% 10%, 100% 100%, 0% 100%);
+}
+.overloa{
+    position: absolute;
+        z-index: 10;
+        left: 100px;
 }
 
 
@@ -28,4 +39,16 @@
     color: #fff;
     background-color: #0d6efd;
     border-color: #0d6efd;
+  }
+  .bg-infografia{
+
+    background: url(../img/FONDO.jpg);
+    background-size: cover;
+        background-position: center;
+      
+        height: 150px;
+        width: 100%;
+        margin-top: 25px;
+        padding-top: 15px;
+
   }
