@@ -22,6 +22,10 @@
     
     
     background:var(--bs-morado) ;
+   
+}
+.bg-speeds{
+    background:var(--bs-morado) ;
     clip-path: polygon(0% 0%, 100% 10%, 100% 100%, 0% 100%);
 }
 .overloa{
@@ -52,3 +56,11 @@
         padding-top: 15px;
 
   }
+  .planes {
+    transition: all .3s ease-in-out;
+}
+
+.planes:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}

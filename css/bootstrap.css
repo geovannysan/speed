@@ -8596,6 +8596,9 @@ textarea.form-control-lg {
   .text-sm-end {
     text-align: right !important;
   }
+  .text-sm-white{
+    color: #fff !important;
+  }
 
   .text-sm-center {
     text-align: center !important;
