@@ -64,3 +64,9 @@
     transform: scale(1.05);
     cursor: pointer;
 }
+.invalid {
+    border-color: rgb(240, 60, 90);
+}
+.invalid:focus {
+    border-color: rgb(240, 60, 90) !important;
+}
