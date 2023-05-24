@@ -12,6 +12,23 @@
     clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
     /* sin fixed talves se vea mejor */
     background-attachment: fixed;
+    height: 620px;
+}
+.bg-header-sm {
+    background: url(../img/FONDO.jpg);
+   
+    
+}
+@media (min-width: 576px) {
+    .bg-header {
+            background: url(../img/FONDO.jpg);
+            background-size: cover;
+            background-position: center;
+         
+            /* sin fixed talves se vea mejor */
+            background-attachment: fixed;
+            height: 620px;
+        }
 }
 
 
@@ -54,6 +71,7 @@
         width: 100%;
         margin-top: 25px;
         padding-top: 15px;
+        color: #fff !important;
 
   }
   .planes {

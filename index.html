@@ -14,7 +14,7 @@
     content="width=device-width, initial-scale=1.0, user-scalable=no, maximun-scalable=1.0, maximun-scalable=1.0">
   <title>Titulo</title>
   <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
- 
+
   <!--CSS-->
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/bootstrap.css">
@@ -34,12 +34,12 @@
     </div>
   </div>
 
-  <nav class="navbar navbar-expand-lg navbar-light py-4 bg-speed shadow-lg">
+  <nav class="navbar navbar-expand-lg  py-4 bg-speed shadow-lg">
     <div class="container mx-auto">
       <a class="navbar-brand text-white" href="#"><img src="img/speed_logo_2023.png" style="height: 60px;" alt=""></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon text-white"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-lg-auto mb-2 mb-lg-0">
@@ -47,16 +47,37 @@
             <a class="nav-link active text-white" aria-current="page" href="">Inicio</a>
           </li>
           <li class="nav-item mx-2">
-            <a class="nav-link text-white" href="#">Planes</a>
+            <a class="nav-link text-white" href="#planes">Planes</a>
           </li>
           <li class="nav-item mx-2">
-            <a class="nav-link text-white" href="#">Promociones</a>
+            <a class="nav-link text-white"  href="#planes">Promociones</a>
           </li>
           <li class="nav-item mx-2">
             <a class="nav-link text-white" href="contratar.html">Contratar</a>
           </li>
+          <li class="nav-item d-none d-lg-block">
+            <a class="nav-link" href="https://www.facebook.com/speed.ecuador.ec" target="_blank"><img
+                src="https://speed.com.ec/img/logos/svg/facebook.svg" style="height: 20px" alt=""></a>
+          </li>
+          <li class="nav-item d-none d-lg-block">
+            <a class="nav-link" href="https://www.instagram.com/speed.ecuador" target="_blank"><img
+                src="https://speed.com.ec/img/logos/svg/instagram.svg" style="height: 20px" alt=""></a>
+          </li>
+          <li class="nav-item d-none d-lg-block">
+            <a class="nav-link"
+              href="https://api.whatsapp.com/send?phone=593997500911&amp;text=Vi%20su%20pagina%20web,%20quiero%20contratar%20sus%20servicios%20para%20mi%20domicilio"
+              target="_blank"><img src="https://speed.com.ec/img/logos/svg/whatsapp.svg" style="height: 20px" alt=""></a>
+          </li>
+          <li class="nav-item mx-1 d-block d-lg-none">                    
+              <div class="row container-fluid text-center">
+                  <div class="col-1"><a class="nav-link" href="https://www.facebook.com/speed.ecuador.ec" target="_blank"><img src="https://speed.com.ec/img/logos/svg/facebook.svg" style="height: 20px" alt=""></a></div>
+                  <div class="col-1 mx-2"><a class="nav-link" href="https://www.instagram.com/speed.ecuador" target="_blank"><img src="https://speed.com.ec/img/logos/svg/instagram.svg" style="height: 20px" alt=""></a></div>
+                  <div class="col-1"><a class="nav-link" href="https://api.whatsapp.com/send?phone=593997500911&amp;text=Vi%20su%20pagina%20web,%20quiero%20contratar%20sus%20servicios%20para%20mi%20domicilio" target="_blank"><img src="https://speed.com.ec/img/logos/svg/whatsapp.svg" style="height: 20px" alt=""></a></div>
+              </div>
+            </li>
           <li class="nav-item mx-2">
-            <a class="nav-link text-white btn btn-outline-celeste px-3 shadow-lg" href="https://portal.comnet.ec/cliente/login">Soy Cliente</a>
+            <a class="nav-link text-white btn btn-outline-celeste px-3 shadow-lg"
+              href="https://portal.comnet.ec/cliente/login">Soy Cliente</a>
           </li>
           <li class="nav-item dropdown d-none">
             <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button"
@@ -64,8 +85,8 @@
               Planes
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item text-white" href="#">Planes</a></li>
-              <li><a class="dropdown-item text-white" href="#">Another action</a></li>
+              <li><a class="dropdown-item text-white"  href="#planes">Planes</a></li>
+              <li><a class="dropdown-item text-white d-none" href="#">Another action</a></li>
               <li>
                 <hr class="dropdown-divider">
               </li>
@@ -79,63 +100,125 @@
   </nav>
 
   <div class="container-fluid px-0">
-    <div class="container-fluid bg-header" style="height: 620px;">
+    <div class="container-fluid bg-header  d-none d-sm-none d-md-block" style="">
       <div class="col-12 mx-auto">
 
-        <div class="row h-100 d-flex justify-content-center align-items-center">
+        <div class="row h-100 d-flex flex-wrap-reverse justify-content-center align-items-center">
           <div class="col-12 col-md-4 btn-group-vertical d-none d-sm-none d-md-block">
             <img src="img/speed-el-internet-mas-rapido-del-ecuador.png" class="w-100" alt="">
           </div>
 
           <div class="col-12 col-md-4 text-center d-flex flex-column  align-items-center">
+
+            <p class=" text-white " style="font-weight: bold; font-size: 1.2em; text-transform: uppercase;"> ¡Mas
+              conectado que nunca! </p>
+
             <img src="img/Router.png " class="img-fluid" />
             <img src="img/Boton Fibra Optica.png" class="w-50 img-fluid">
             <img src="img/Boton-Navega-Sin-Limites.png" class="w-50 img-fluid">
-           
+
 
           </div>
 
-          <div class="col-12 col-md-4 btn-group-vertical">
-            <img src="img/Descuento.png" class="img-fluid text-center mx-auto" alt="">
+          <div class="col-12 col-md-4 btn-group-vertical text-center" style="position: relative;">
+
+            <div class="m-auto " style="line-height: 0.1em; ">
+              <img src="img/Descuento.png" class="img-fluid text-center" style="padding-bottom: -55px;" alt="">
+
+            </div>
+            <div class="container " style="position: relative; margin-top: -65px;  text-transform:uppercase;">
+              <p class=" text-white " style="font-weight: bold; font-size: 1.2em;"> En Todos los planes </p>
+            </div>
+            <div class=" container">
+              <p class=" text-white " style="font-weight: bold; font-size: 1.5em; text-transform: uppercase;"> Elige tu
+                plan de interne con
+                un solo click</p>
+            </div>
+
           </div>
         </div>
+
+
       </div>
     </div>
+    <div class="container-fluid bg-header-sm d-block d-sm-block d-md-none  " style="">
+      <div class="col-12 mx-auto">
+    
+        <div class="row h-100 d-flex flex-wrap-reverse justify-content-center align-items-center">
+          <div class="col-12 col-md-4 btn-group-vertical d-none d-sm-none d-md-block">
+            <img src="img/speed-el-internet-mas-rapido-del-ecuador.png" class="w-100" alt="">
+          </div>
+    
+          <div class="col-12 col-md-4 text-center d-flex flex-column  align-items-center">
+    
+            <p class=" text-white " style="font-weight: bold; font-size: 1.2em; text-transform: uppercase;"> ¡Mas
+              conectado que nunca! </p>
+    
+            <img src="img/Router.png " class="img-fluid" />
+            <img src="img/Boton Fibra Optica.png" class="w-50 img-fluid">
+            <img src="img/Boton-Navega-Sin-Limites.png" class="w-50 img-fluid">
+    
+    
+          </div>
+    
+          <div class="col-12 col-md-4 btn-group-vertical text-center" style="position: relative;">
+    
+            <div class="m-auto " style="line-height: 0.1em; ">
+              <img src="img/Descuento.png" class="img-fluid text-center" style="padding-bottom: -55px;" alt="">
+    
+            </div>
+            <div class="container " style="position: relative; margin-top: -65px;  text-transform:uppercase;">
+              <p class=" text-white " style="font-weight: bold; font-size: 1.2em;"> En Todos los planes </p>
+            </div>
+            <div class=" container">
+              <p class=" text-white " style="font-weight: bold; font-size: 1.5em; text-transform: uppercase;"> Elige tu
+                plan de interne con
+                un solo click</p>
+            </div>
+    
+          </div>
+        </div>
+    
+    
+      </div>
+    </div>
+  </div>
+  </div>
   </div>
 
 
   <div class="container-fluid pb-5">
-    <div class="container">
+    <div class="container text-center">
       <div class="row ">
         <div class="col-md-4 ">
-          <img src="img/Redes Sociales.png" />
+          <img src="img/Redes Sociales.png" class="img-fluid" />
         </div>
         <div class="col-md-4">
-          <img src="img/Soporte Tecnico.png" />
+          <img src="img/Soporte Tecnico.png" class="img-fluid" />
         </div>
         <div class="col-md-4">
-          <img src="img/CallCenter.png" />
+          <img src="img/CallCenter.png"  class="img-fluid"/>
         </div>
       </div>
     </div>
   </div>
   <!--Planes -->
-  <div class="col-10 mx-auto pt-5 ">
+  <div class="col-10 mx-auto pt-5 " id="planes">
 
-    <div class=" d-flex flex-wrap justify-content-around">
-      <div class="col-md-2">
+    <div class=" d-flex flex-wrap justify-content-center">
+      <div class="col-sm-4 col-md-4 col-lg-2">
         <img src="img/HOME.jpg" class="w-100 cursor planes" />
       </div>
-      <div class="col-md-2">
+      <div class="col-sm-4 col-md-4 col-lg-2">
         <img src="img/SILVER.jpg" class="w-100 cursor planes " />
       </div>
-      <div class="col-md-2">
+      <div class="col-sm-4 col-md-4 col-lg-2">
         <img src="img/ADVANCE.jpg" class="w-100 cursor planes" />
       </div>
-      <div class="col-md-2">
+      <div class="col-sm-4 col-md-4 col-lg-2">
         <img src="img/PRO.jpg" class="w-100 cursor planes" />
       </div>
-      <div class="col-md-2">
+      <div class="col-sm-4 col-md-4 col-lg-2">
         <img src="img/SPEED.jpg" class="w-100 cursor planes" />
       </div>
 
@@ -159,10 +242,12 @@
   </section>
   <section class="bg-app container-fluid">
     <div class="row">
-      <div class="col-12 col-md-6 p-5 text-center m-auto">
+      <div class="col-12 col-md-6 p-5 text-center m-auto animate__ animate__bounceInDown animated"
+        style="visibility: visible; animation-name: bounceInDown;">
         <img src="img/Descagra la APP.png" class="w-75" />
         <img src="img/01-xiaomi-redmi-note-11-pro-128gb-azul-front.png" class="w-75" />
-       <a href="https://play.google.com/store/apps/details?id=app.ec.comnet" target="_blank"> <img src="img/Google-Play.png"  class="w-25" ></img></a>
+        <a href="https://play.google.com/store/apps/details?id=app.ec.comnet" target="_blank"> <img
+            src="img/Google-Play.png" class="w-25"></img></a>
       </div>
       <div class="col-6 p-5 m-auto">
         <img src="img/GifCelular.gif" class=" img-fluid h-75 " style="transform: rotate(0deg);" />
@@ -175,21 +260,22 @@
     <div class="col-12 col-md-6 text-center " style=" z-index: 2;">
       <img src="img/Personaje.png" class="w-75" />
     </div>
-    <div class="col-12 col-md-6 text-center mt-3" style="z-index: 2;">
-      <img src="img/RegistratuPAGO.png"  class="w-75   pb-4" />
-      <div class=" text-black " style="line-height: 0.3em; font-weight: bold;">
+    <div class="col-12 col-md-6 text-center mt-3 "  style="z-index: 2;">
+      <img src="img/RegistratuPAGO.png" class="w-75   pb-4" />
+      <div class=" text-secondary " style="line-height: 0.3em; font-weight: bold;">
         <p>REGISTRA TU PAGO Y CAMBIA TU CLAVE </p>
-      <p>WIFI CON TU ASSISTENTE VIRTUAL</p>
-      <button class=" btn  btn-outline-success">Whatsapp</button>
+        <p>WIFI CON TU ASSISTENTE VIRTUAL</p>
+        <a class=" btn  btn-outline-success" target="_blank"
+          href="https://api.whatsapp.com/send?phone=593997500911&text=Vi%20su%20pagina%20web,%20quiero%20contratar%20sus%20servicios%20para%20mi%20domicilio">Whatsapp</a>
       </div>
-      
+
     </div>
   </div>
   <footer class="bg-speeds container-fluid py-2 mt-5 pt-5" style="position: absolute;"> <!-- FOOTER-->
 
     <div class="col-12 col-lg-9 mx-auto py-5 pt-5 mt-5">
-      <div class="row text-white">
-        <div class="col-12 col-md-6 col-xl-3 my-3">
+      <div class="row text-white pt-5">
+        <div class="col-12 col-md-6 col-xl-3 my-3 pt-5">
           <ul><span class="font-weight-bold">Computecnicsnet S.A - Speed</span>
             <p class="mt-3">Nuestra misión es mantener conectadas a miles de familias alrededor del mundo. Por ello
               brindamos servicio de internet y telecomunicaciones.</p>
@@ -204,7 +290,7 @@
             </div>
           </ul>
         </div>
-        <div class="col-12 col-md-6 col-xl-3 my-3">
+        <div class="col-12 col-md-6 col-xl-3 my-3 pt-5">
           <ul>
             <span class="font-weight-bold">Normas y Regulaciones</span>
             <li class="my-2"><a class="text-white text-decoration-none" href="https://www.arcotel.gob.ec/"
@@ -244,7 +330,7 @@
                   style="margin-left: 3px; width: 16px; height: 16px;"></a></li>
           </ul>
         </div>
-        <div class="col-12 col-md-6 col-xl-3 my-3">
+        <div class="col-12 col-md-6 col-xl-3 my-3 pt-5">
           <ul class="text-white">
             <span class="font-weight-bold">Área de Clientes</span>
             <li class="my-2"><a class="text-white text-decoration-none" style="cursor:pointer" data-toggle="modal"
@@ -257,7 +343,7 @@
                 data-target="#terminosCondiciones">Términos y condiciones</a></li>
           </ul>
         </div>
-        <div class="col-12 col-md-6 col-xl-3 my-3">
+        <div class="col-12 col-md-6 col-xl-3 my-3 pt-5">
           <ul class="text-white">
             <span class="font-weight-bold">Contáctanos</span>
             <li class="my-2"><a class="text-white text-decoration-none" href="tel:+593980850287" target="_blank"><img
