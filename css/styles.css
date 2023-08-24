@@ -1,80 +1,86 @@
 /* Styles */
 
-:root{
+:root {
     --bs-celeste: #0081c8;
     --bs-morado: #250d36;
 }
 
-.bg-header{
-    background: url(../img/FONDO.jpg);
+.bg-header {
+    background: url('../imagen/INTERNET-SPEED-FONDO.png');
     background-size: cover;
     background-position: center;
-    clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
     /* sin fixed talves se vea mejor */
-    background-attachment: fixed;
+
     height: 620px;
 }
+
 .bg-header-sm {
-    background: url(../img/FONDO.jpg);
-   
-    
+    background: url('../imagen/INTERNET-SPEED-FONDO.png');
+
+
 }
+
 @media (min-width: 576px) {
     .bg-header {
-            background: url(../img/FONDO.jpg);
-            background-size: cover;
-            background-position: center;
-         
-            /* sin fixed talves se vea mejor */
-            background-attachment: fixed;
-            height: 620px;
-        }
+
+        background-image: url('../imagen/INTERNET-SPEED-FONDO.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 600px;
+    }
 }
 
 
-.cursor{
+.cursor {
     cursor: pointer;
 }
-.bg-speed{
-    
-    
-    background:var(--bs-morado) ;
-   
+
+.bg-speed {
+
+
+    background: var(--bs-morado);
+
 }
-.bg-speeds{
-    background:var(--bs-morado) ;
+
+.bg-speeds {
+    background: var(--bs-morado);
     clip-path: polygon(0% 0%, 100% 10%, 100% 100%, 0% 100%);
 }
-.overloa{
+
+.overloa {
     position: absolute;
-        z-index: 10;
-        left: 100px;
+    z-index: 10;
+    left: 100px;
 }
 
 
 .btn-outline-celeste {
     color: #0081c8;
     border: 2px solid #0081c8 !important;
-  }
-  .btn-outline-celeste:hover {
+}
+
+.btn-outline-celeste:hover {
     color: #fff;
     background-color: #0d6efd;
     border-color: #0d6efd;
-  }
-  .bg-infografia{
+}
+
+.bg-infografia {
 
     background: url(../img/FONDO.jpg);
     background-size: cover;
-        background-position: center;
-      
-        height: 150px;
-        width: 100%;
-        margin-top: 25px;
-        padding-top: 15px;
-        color: #fff !important;
+    background-position: center;
 
-  }
-  .planes {
+    height: 150px;
+    width: 100%;
+    margin-top: 25px;
+    padding-top: 15px;
+    color: #fff !important;
+
+}
+
+.planes {
     transition: all .3s ease-in-out;
 }
 
@@ -82,9 +88,11 @@
     transform: scale(1.05);
     cursor: pointer;
 }
+
 .invalid {
     border-color: rgb(240, 60, 90);
 }
+
 .invalid:focus {
     border-color: rgb(240, 60, 90) !important;
 }
