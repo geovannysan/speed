@@ -22,7 +22,7 @@
 .bg-regalos {
     background: url('/imagen/regalos.png');
     background-position: center;
-    background-size: cover;
+    background-size: contain;
 }
 
 .bg-header-sm {
@@ -40,8 +40,8 @@
         background-repeat: no-repeat;
         height: 600px;
     }
+        
 }
-
 
 .cursor {
     cursor: pointer;
@@ -132,4 +132,28 @@
 
 .swiper-scrollbar {
     color: transparent !important;
+}
+
+.slick-carousel {
+  display: flex; /* Utiliza flexbox para centrar los elementos */
+  justify-content: center; /* Centra los elementos horizontalmente */
+  align-items: center; /* Centra los elementos verticalmente */
+  gap: 20px; /* Ajusta el espaciado entre los elementos */
+}
+
+/* Ajusta el tamaño de las imágenes dentro del carrusel */
+.slick-carousel img {
+    height: 350px;
+    width: auto;
+    /* Ajusta el ancho automáticamente */
+    max-width: 100%;
+    /* Asegura que las imágenes no se desborden */
+}
+.swiper-button-next{
+    color: aliceblue !important;
+    padding-left: 15px !important;
+}
+.swiper-button-prev {
+    color: aliceblue !important;
+    padding-right: 45px !important;
 }
