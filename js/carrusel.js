@@ -1,7 +1,7 @@
 const swiper = new Swiper('.swiper-container', {
     direction: 'horizontal',
     loop: true,
-    slidesPerView: 3, 
+    slidesPerView: 3,
     spaceBetween: 0, // Ajusta este valor para reducir el espacio entre diapositivas
 
     navigation: {
@@ -47,15 +47,23 @@ $(document).ready(function () {
             {
                 breakpoint: 800,
                 settings: {
-                    slidesToShow: 1,
+                    slidesToShow: 2,
                     centerMode: true,
                 }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    spaceBetween: 10,
+
+                }
+
             },
             {
                 breakpoint: 992,
                 settings: {
                     slidesToShow: 2,
-                    centerMode: true,
                 }
             }
         ],
@@ -63,3 +71,79 @@ $(document).ready(function () {
         prevArrow: '<div class="swiper-button-prev" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-b47a45d67edc65b8"></div>'
     });
 });
+let boton = document.getElementById("btn-consulta")
+let cedual = document.getElementById("numberce")
+let nombr = document.getElementById("nombre")
+let direcion = document.getElementById("direccion")
+let cantidad = document.getElementById("cantiada")
+let valor = document.getElementById("total")
+let cerr = document.querySelector(".close")
+let cerrar = document.getElementById("close")
+var myModal = new bootstrap.Modal(document.getElementById('exampleModal'));
+cerr.addEventListener("click", function () {
+    console.log("click")
+    
+    myModal.hide();
+})
+cerrar.addEventListener("click", function () {
+    console.log("click")
+
+    myModal.hide();
+})
+
+boton.addEventListener('click', function (e) {
+    console.log(cedual.value)
+
+    if (cedual.value.trim() == "" || cedual.value.trim().length < 5) {
+        /* $.alert({
+             title: 'Atento!',
+             content: 'Ingresa el número de identificación del propietario del servicio!',
+         });*/
+        return
+    }
+    Consultas(cedual.value).then(oupt => {
+        if (oupt.estado == "exito") {
+            let datos = oupt.datos[0]
+
+           
+            myModal.show();
+            document.querySelector('.modal').classList.add('zoom');
+            nombr.innerHTML = datos.nombre
+            direcion.innerHTML = datos.direccion_principal
+            cantidad.innerHTML = "Total de Facturas impagas: " + datos.facturacion.facturas_nopagadas
+            valor.textContent = datos.facturacion.total_facturas
+
+        }
+        console.log(oupt)
+    }).catch(err => {
+        console.log(err)
+    })
+    console.log(e)
+})
+const Consultas = async (parm) => {
+    let datos = {
+        "cedula": "" + parm,
+        "operador": "appspeed"
+    }
+    try {
+        let { data } = await axios.post("https://api.t-ickets.com/mikroti/PortalApi/GetClientsDetails", datos)
+        return data
+    } catch (error) {
+        console.log(error)
+        return error
+    }
+}
+/**
+ $.confirm({
+        title: 'Title',
+        content: 'url:text.txt',
+        onContentReady: function () {
+            var self = this;
+            this.setContentPrepend('<div>Prepended text</div>');
+            setTimeout(function () {
+                self.setContentAppend('<div>Appended text after 2 seconds</div>');
+            }, 2000);
+        },
+        columnClass: 'medium',
+    });
+ */

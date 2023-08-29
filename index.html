@@ -3,6 +3,7 @@
 <head>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Asap:wght@600&display=swap');
   </style>
 
   <!--Analytics-->
@@ -24,10 +25,13 @@
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
   <link rel="stylesheet" type="text/css"
     href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
-
-
+  <link href="https://www.dafontfree.net/embed/YXNhcC1yZWd1bGFyJmRhdGEvMTYvYS83Nzc5NC9Bc2FwLVJlZ3VsYXIub3Rm"
+    rel="stylesheet" type="text/css" />
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <!-- Js WoW-->
   <script src="js/wow.min.js"></script>
@@ -57,16 +61,17 @@
     </li>
   </div>
   <!--Navar-->
-  <nav class="navbar navbar-expand-lg  py-1 px-3  shadow-lg">
+  <nav class="navbar navbar-expand-lg  py-1 px-3  shadow-lg" style="font-family: 'asap-regular';">
     <div class="d-flex flex-wrap justify-content-between align-items-center w-100 text-center">
       <a class="navbar-brand   pn-1" href="#" style="padding-right: -10px !important;">
         <img src="imagen/INTERNET_marca speed a color-02.png" style="height: 90px;" alt="">
       </a>
-      <div class=" navbar-dark">     
-      <button class="navbar-toggler float-end" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+      <div class=" navbar-dark">
+        <button class="navbar-toggler float-end" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
       </div>
       <div class="collapse navbar-collapse  justify-content-center justify-content-sm-end " id="navbarSupportedContent">
         <ul class="navbar-nav fw-bold d-flex flex-wrap align-items-center bg-body ">
@@ -89,16 +94,16 @@
             <a class="nav-link text-secondary " target="_blank"
               href="https://api.whatsapp.com/send?phone=593997500911&amp;text=Vi%20su%20pagina%20web,%20quiero%20contratar%20sus%20servicios%20para%20mi%20domicilio">Contáctenos</a>
           </li>
-        
-        
+
+
           <li class="nav-item ">
             <a class="nav-link  " href="https://portal.comnet.ec/cliente/login">
               <img src="imagen/INTERNET-speed_ soy cliente 1-02.png" style="height: 60px;" />
             </a>
           </li>
           <li class="nav-item dropdown d-none">
-            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">
+            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
               Planes
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -110,12 +115,12 @@
               <li><a class="dropdown-item text-white" href="#">Something else here</a></li>
             </ul>
           </li>
-        
+
         </ul>
       </div>
-  
-     
-      
+
+
+
     </div>
   </nav>
   <!--Header-->
@@ -163,29 +168,16 @@
   <div id="planes" style="background-color: rgb(213, 210, 210);"
     class=" container-fluid    mx-auto  d-flex flex-column justify-content-center align-items-center">
     <div class="w-100 py-2 d-flex  justify-content-center">
-      <div class="text-center">
-        <h2 style="font-size: 4.2rem;"><span class=" fw-bold" style="color: rgb(21, 21, 126);">Nuestros</span> <span
-            class="text-info fw-bold">Planes</span></h2>
-        <p style="font-size: 15px;" class=" fw-bold text-black">Planes de Internet por fibra óptica para el hogar </h4>
+      <div class="text-center pt-2">
+        <h2 style="font-size: 4.2rem; line-height: 0.5; "><span class=" fw-bold"
+            style="color: #1a245B; font-family: 'Asap', sans-serif;">NUESTROS</span> <span class="text-info fw-bold"
+            style="color: #0081c7;">PLANES</span></h2>
+        <p style="font-size: 15px; font-family: asap-regular;" class=" fw-bold text-black">Planes de Internet por fibra
+          óptica para el hogar </h4>
       </div>
     </div>
-    <div class="swiper swiper-container d-none " style="max-width:1100px;">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img class=" planes" src="imagen/PLANES WEB-05.png" style="max-height: 300px;" />
-        </div>
-        <div class="swiper-slide"><img class="planes" src="imagen/PLANES WEB-04.png" style="max-height: 300px;" /></div>
-        <div class="swiper-slide"><img class="shadow planes" src="imagen/PLANES WEB_Mesa de trabajo 1.png"
-            style="max-height: 300px;" /></div>
-      </div>
-      <div class="swiper-slide"><img class=" planes" src="imagen/PLANES WEB-02.png" style="max-height: 300px;" />
-      </div>
-      <div class="swiper-slide"><img class=" planes" src="imagen/PLANES WEB-03.png" style="max-height: 300px;" />
-      </div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
-    </div>
-    <div class="slick-carousel container-fluid  " style="max-width:1100px;">
+
+    <div class="slick-carousel container ">
       <div class="s"><img class="  planes" src="imagen/PLANES WEB-05.png" style="height: 350px;" /></div>
       <div class="s"><img class="  planes" src="imagen/PLANES WEB-04.png" style="height: 350px;" /></div>
       <div class=""><img class=" planes" src="imagen/PLANES WEB-03.png" style="height: 350px;" /></div>
@@ -195,7 +187,8 @@
     </div>
 
     <div class=" container d-flex justify-content-center my-3">
-      <button class=" btn text-white bg-speed px-3" style="background-color: rgb(20, 20, 47) !important;">
+      <button class=" btn text-white bg-speed px-5"
+        style="background-color: #1a245B!important;font-family: 'Asap', sans-serif; ">
         Promociones</button>
     </div>
   </div>
@@ -204,13 +197,18 @@
     <div class="col-12 col-lg-3 shadow m-2  p-3">
       <div class=" text-center">
         <img style="height: 130px;" class="img-fluid" src="imagen/INTERNET-SPEED_ CONTACTA CON UN ASESOR-02.png">
-        <h2 class=" fw-bold">Contacta</h2>
-        <p class="text-info fw-bold" style="font-size:1.5rem;">con un asesor</p>
-        <span class="fw-bold w-100 text-center" style="font-size: 0.7rem;">Revisa la cobertura disponible en tu sector</span>
-        <label class="col-12 form-label text-white  form-label-lg">Ingrese tu número de celular</label>
+        <h2 class=" fw-bold" style="font-family: 'Asap', sans-serif; color: #1a245B;">Contacta</h2>
+        <p class="text-info fw-bold" style="font-size:1.5rem; font-family: 'Asap', sans-serif; color: #1a245B">con un
+          asesor</p>
+        <span class="fw-bold w-100 text-center" style="font-size: 0.7rem; font-family: asap-regular;">Revisa la
+          cobertura disponible en tu
+          sector</span>
+        <label class="col-12 form-label text-white  form-label-lg" style="font-family: asap-regular;">Ingrese tu número
+          de celular</label>
         <div class="pt-2">
 
-          <button class="btn text-white  " style="background-color: rgb(20, 20, 47)"> Contactar</button>
+          <button class="btn text-white  " style="background-color: #1a245B; font-family: 'Asap', sans-serif;">
+            Contactar</button>
         </div>
       </div>
 
@@ -219,26 +217,69 @@
     <div class="col-12 col-lg-3 shadow m-2 p-3">
       <div class=" text-center">
         <img style="height: 130px;" class="img-fluid" src="imagen/INTERNET-SPEED_ CONSULTA TU FACTURA-02.png">
-        <h2 class=" fw-bold">Consulta</h2>
-        <p class="text-info fw-bold" style="font-size:1.5rem;">tu factura</p>
-        <span class="fw-bold w-100" style="font-size: 0.8rem;">Revisa el valor de tu factura</span>
-        <label class=" form-label  form-label-lg">titular del servicio</label>
-        <input class=" form-control " placeholder="Nª cédula" />
+        <h2 class=" fw-bold" style="color: #1a245B;">Consulta</h2>
+        <p class="text-info fw-bold" style="font-size:1.5rem; color: #0081c7; font-family: 'Asap', sans-serif;">tu
+          factura</p>
+        <span class="fw-bold w-100" style="font-size: 0.8rem; font-family: asap-regular;">Revisa el valor de tu
+          factura</span>
+        <label class=" form-label  form-label-lg" style="font-family: 'Asap', sans-serif;">titular del servicio</label>
+        <input class=" form-control " type="number" id="numberce" placeholder="Nª cédula" />
         <div class="pt-2">
-          <button class="btn text-white  " style="background-color: rgb(20, 20, 47)"> Consultar</button>
+          <button class="btn text-white   " id="btn-consulta"
+            style="background-color:#1a245B; font-family: 'Asap', sans-serif;">
+            Consultar</button>
         </div>
       </div>
 
     </div>
+    <!--Modal de consulta -->
+    <div class="modal fade" id="exampleModal" tabindex="-1"  aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="row">
+            <div class="col-12 col-md-6 d-flex justify-content-center align-items-center" style="position: relative;">
+              <img class="img-fluid p-0" src="imagen/REFIERE UN AMIGO.png" style="position: relative;" alt="">
+              <button class="bg-light px-3 btn pb-2" style="position: absolute; border: none; bottom: 25px;font-family: 'Asap', sans-serif; color: #1a245B;"> REFERIR</button>
+            </div>
+            <div class="col-12 col-md-6 ">
+              <img  class="img-fluid px-4" src="imagen/INTERNET_marca speed a color-02.png"/>
+              <div class="container  pt-2" style="line-height: 0.9;">
+                <p style="font-family: asap-regular;">HOLA,</p>
+                <h4 style=" font-family: 'Asap', sans-serif;" id="nombre"></h4>
+                <p style="font-size: 0.9em; font-family: asap-regular;"id="direccion"></p>
+                <p style="font-size: 0.8em; font-family: asap-regular;"id="cantiada"></p>
+               <div class="text-center">
+                <h1 style="font-family: 'Asap', sans-serif; color: #1a245B;" id="total"></h1>
+               </div> 
+
+                  <div class="d-flex flex-row justify-content-center pb-2">
+                    <div>
+                      <button class="close btn text-white px-4 shadow "   style="font-family: 'Asap', sans-serif;background-color: #1a245B;"  data-dismiss="modal"> Ok</button>
+                    </div>
+                    <div class="px-3">
+                      <button class="close btn text-white shadow " id="close" style="font-family: 'Asap', sans-serif; background-color: #1a245B;"  data-dismiss="modal">CLOSE</button>
+                    </div>
+
+                  </div>
+              </div>
+
+            </div>
+          </div>
+          </div>
+      </div>
+    </div>
+   
     <div class="col-12 col-lg-3 shadow m-2 p-3">
       <div class=" text-center">
         <img style="height: 130px;" class="img-fluid" src="imagen/INTERNET-SPEED_ CONSULTA TU PLAN IDEAL-02.png">
-        <h2 class=" fw-bold">Calcula</h2>
-        <p class="text-INFO fw-bold" style="font-size:1.5rem;">TU PLAN IDEAL</p>
-        <span class="fw-bold w-50 " style="font-size: 0.8rem;">Necesitas conocer Culaes son los
+        <h2 class=" fw-bold" style="font-family: 'Asap', sans-serif;">Calcula</h2>
+        <p class="text-INFO fw-bold" style="font-size:1.5rem; font-family: 'Asap', sans-serif;">TU PLAN IDEAL</p>
+        <span class="fw-bold w-50 " style="font-size: 0.8rem; font-family: asap-regular;">Necesitas conocer Culaes son
+          los
           megas ideale para tu HOGAR</span>
         <div class="pt-4 mt-2">
-          <button class="btn text-white  " style="background-color: rgb(20, 20, 47)"> Calcular</button>
+          <button class="btn text-white  " style="background-color: #1a245B;font-family: 'Asap', sans-serif;">
+            Calcular</button>
         </div>
       </div>
 
@@ -255,8 +296,9 @@
       </div>
       <div class="col-12 col-md-5 d-flex justify-content-center align-items-center pt-5 pb-3">
         <div class="px-5">
-          <h1 class="text-white fw-bold"> DESCARGA LA NUEVA APP </h1>
-          <p class="pr-5 fw-bold text-white">Por medio de la APP de Speed Ecuador podrá acceder al portal de servicios
+          <h1 class="text-white fw-bold" style="font-family: 'Asap', sans-serif;"> DESCARGA LA NUEVA APP </h1>
+          <p class="pr-5 fw-bold text-white" style="font-family: asap-regular;">Por medio de la APP de Speed Ecuador
+            podrá acceder al portal de servicios
             donde podrás realizar pagos, generar tickets de soporte ténico, subir de plan y nucho mas </p>
           <div class="row col-12 col-md-8">
             <div>
@@ -266,7 +308,8 @@
                 ">
             </div>
             <div class="px-3">
-              <button class="btn bg-white fw-bold " style="height: 50px; width:190px; ">Descarga App</button>
+              <button class="btn bg-white fw-bold "
+                style="height: 50px; width:190px;font-family: 'Asap', sans-serif; ">Descarga App</button>
             </div>
           </div>
 
@@ -278,63 +321,81 @@
 
   </div>
   <!--Registro pagos-->
-  <div  class=" container d-flex flex-wrap justify-content-between align-items-center">
+  <div class=" container d-flex flex-wrap justify-content-between align-items-center">
 
   </div>
   <div id="reportar" class="container row col-12 col-sm-9   d-flex justify-content-around py-5 mx-auto ">
-    <div class="col-12 col-md-6 col-lg-5 shadow m-2 pt-3  px-3" >
-      <div class=" text-center pt-2">
-        <div class="btn-group-vertical ">
-          <div>
-            <img style="height: 50px;" src="imagen/INTERNET-SPEED_ICONO DE WHATSAPP-02.png">
+    <div class="col-12 col-md-6 col-lg-5 shadow m-2 pt-3  px-3">
+      <div class="btn-group-vertical text-center pt-2">
+        <div>
+          <div class="d-flex flex-wrap justify-content-center ">
+            <div>
+              <img style="height: 50px;" src="imagen/INTERNET-SPEED_ICONO DE WHATSAPP-02.png">
+            </div>
+
+            <div class=" text-center " style="line-height: 1;" style="font-family: 'Asap', sans-serif;">
+              <h1 style=" font-size: 1.em; line-height: 0.5; color: rgb(18, 18, 89);" class=" fw-bold-sm "> REGISTRA
+              </h1>
+              <h1 style=" font-size: 1.em; line-height: 1;" class="text-info fw-bold float-start">TU PAGO</h1>
+            </div>
+          </div>
+          <div class=" px-1 d-flex align-items-center "
+            style="height: 150px; max-height: 150px;font-family: asap-regular;">
+            <p style="font-size: 0.81em;  " class="fw-bold">Registra tu pago por medio de tu asistente virtual whatsapp,
+              cambia de clave y mucho
+              mas.</p>
+          </div>
+          <img style="height: 60px;" src="imagen/INTERNET_SPEED_ATENCION 247-02.png" alt="">
+          <div class="">
+            <button class="btn text-white px-3 " style="background-color: #1a245B; font-family: 'Asap', sans-serif;">
+              Reportar pago</button>
           </div>
 
-          <div class=" text-center " style="line-height: 1;">
-            <h1 style=" font-size: 1.em; line-height: 0.5; color: rgb(18, 18, 89);" class=" fw-bold-sm "> REGISTRA </h1>
-            <h1 style=" font-size: 1.em; line-height: 1;" class="text-info fw-bold float-start">TU PAGO</h1>
-          </div>
         </div>
-        <div class=" px-5 ">
-          <p style="font-size: 0.81em;" class="fw-bold">Registra tu pago por medio de tu asistente virtual whatsapp,
-            cambia de clave y mucho
-            mas.</p>
+        <div class="d-flex align-items-end justify-content-center  w-100" style="height: auto;">
+
+
+          <img style="height: 300px;" class=" img-fluid "
+            src="imagen/INTERNET-SPEED_REGISTRA TU PAGO_Mesa de trabajo 1 copia.png">
         </div>
-        <img style="height: 60px;" src="imagen/INTERNET_SPEED_ATENCION 247-02.png" alt="">
-        <div class="">
-          <button class="btn text-white px-3 " style="background-color: rgb(20, 20, 47)"> Reportar pago</button>
-        </div>
-        <img style="max-height: 300px;" class=" img-fluid "
-          src="imagen/INTERNET-SPEED_REGISTRA TU PAGO_Mesa de trabajo 1 copia.png">
       </div>
 
     </div>
 
-    <div class="col-12 col-md-5 shadow m-2  pt-3 px-3" >
-      <div class="text-center pt-2">
-        <div class="btn-group-vertical">
-          <div>
-            <img style="height: 50px;" src="imagen/INTERNET-SPEED-REFIERE UN AMIGO-02.png">
+    <div class="col-12 col-md-6 col-lg-5 shadow m-2 pt-3  px-3">
+      <div class="btn-group-vertical text-center pt-2">
+        <div>
+          <div class="d-flex flex-row   justify-content-center">
+            <div>
+              <img style="height: 50px;" src="imagen/INTERNET-SPEED-REFIERE UN AMIGO-02.png">
+            </div>
+
+            <div class=" text-center " style="line-height: 1; font-family: 'Asap', sans-serif;">
+              <h1 style=" font-size: 1.em; line-height: 0.5; color:#1a245B; " class=" fw-bold-sm ">REFIERE <span
+                  class=" text-white">...</span> </h1>
+              <h1 style=" font-size: 1.em; line-height: 1;" class="text-info fw-bold float-start">UN AMIGO</h1>
+            </div>
           </div>
 
-          <div class=" text-center " style="line-height: 1;">
-            <h1 style=" font-size: 1.em; line-height: 0.5; color: rgb(18, 18, 89);" class=" fw-bold-sm ">REFIERE <span
-                class=" text-white">...</span> </h1>
-            <h1 style=" font-size: 1.em; line-height: 1;" class="text-info fw-bold float-start">UN AMIGO</h1>
+          <div class=" px-1 d-flex align-items-center "
+            style=" height: 150px; max-height: 150px; font-family: asap-regular;">
+            <p style="font-size: 0.80em; " class="fw-bold">Recibe el 50% de descuento en tu factura
+              por recomendar cliente.
+              Aplica un solo descuento por cada factura
+            </p>
+
+          </div>
+
+          <img style="height: 60px;" alt="">
+          <div class="">
+            <button class="btn text-white px-5 " style="background-color: #1a245B;font-family: 'Asap', sans-serif;">
+              Referir </button>
           </div>
         </div>
-        <div class=" px-5" style="padding-top: -15px;">
-          <p style="font-size: 0.80em; " class="fw-bold">Recibe el 50% de descuento en tu factura
-            por recomendar cliente.
-            Aplica un solo descuento por cada factura
-          </p>
-
+        <div style="height: 100% !important; width: 100%;" class="">
+          <img style="height: 300px;" class=" img-fluid w-100 "
+            src="imagen/INTERNET-SPEED_REFIERE UN AMIGO_Mesa de trabajo 1 copia.png">
         </div>
-        <img style="height: 60px;" src="imagen/INTERNET_SPEED_ATENCION 247-02.png" alt="">
-        <div class="">
-          <button class="btn text-white px-5 " style="background-color: rgb(20, 20, 47)"> Referir </button>
-        </div>
-        <img  class=" img-fluid "
-          src="imagen/INTERNET-SPEED_REFIERE UN AMIGO_Mesa de trabajo 1 copia.png">
       </div>
 
     </div>
@@ -356,9 +417,6 @@
     </div>
 
   </div>
-
-
-
   </div>
   <div class="container-fluid pb-5 d-none">
     <div class="container text-center">
@@ -446,7 +504,7 @@
     </div>
   </div>
   <footer class=" container-fluid py-2 mt-5 pt-5 text-white "
-    style="position: absolute; background-color: rgb(18, 18, 89);"> <!-- FOOTER-->
+    style="position: absolute; background-color: #1a245B;font-family: asap-regular;"> <!-- FOOTER-->
     <div class="row px-2">
       <div class=" col-md-3 px-3">
         <span class="font-weight-bold">Computecnicsnet S.A - Speed</span>
