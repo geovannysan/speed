@@ -169,7 +169,7 @@
     class=" container-fluid    mx-auto  d-flex flex-column justify-content-center align-items-center">
     <div class="w-100 py-2 d-flex  justify-content-center">
       <div class="text-center pt-2">
-        <h2 style="font-size: 4.2rem; line-height: 0.5; "><span class=" fw-bold"
+        <h2 style="font-size: 4.2rem; line-height: 0.8; "><span class=" fw-bold"
             style="color: #1a245B; font-family: 'Asap', sans-serif;">NUESTROS</span> <span class="text-info fw-bold"
             style="color: #0081c7;">PLANES</span></h2>
         <p style="font-size: 15px; font-family: asap-regular;" class=" fw-bold text-black">Planes de Internet por fibra
@@ -178,11 +178,30 @@
     </div>
 
     <div class="slick-carousel container ">
-      <div class="s"><img class="  planes" src="imagen/PLANES WEB-05.png" style="height: 350px;" /></div>
-      <div class="s"><img class="  planes" src="imagen/PLANES WEB-04.png" style="height: 350px;" /></div>
-      <div class=""><img class=" planes" src="imagen/PLANES WEB-03.png" style="height: 350px;" /></div>
-      <div class="ide"><img class=" planes" src="imagen/PLANES WEB-02.png" style="height: 350px;" /></div>
-      <div class="ide"><img class=" planes" src="imagen/PLANES WEB_Mesa de trabajo 1.png" style="height: 350px;" />
+      <div class="d-flex justify-content-center align-items-center" style="position: relative;">
+        <img class="  planes" src="imagen/PLANES WEB-05.png" style="height: 350px;" />
+      <button class="btn-s btn-naranja text-white px-4 py-1" style="position: absolute; bottom: 10px; font-size: 15px; font-family: asap-regular;" ><i class="icon-cart"></i> Contratar</button>
+      </div>
+      <div class="d-flex justify-content-center align-items-center" style="position: relative;"><img class="  planes" src="imagen/PLANES WEB-04.png" style="height: 350px;" />
+      <button class="btn-s btn-naranja text-white px-4 py-1"
+        style="position: absolute; bottom: 10px; font-size: 15px; font-family: asap-regular;"><i class="icon-cart"></i>
+        Contratar</button>
+      </div>
+      <div class="d-flex justify-content-center align-items-center" style="position: relative;">
+        <img class=" planes" src="imagen/PLANES WEB-03.png" style="height: 350px;" />
+      <button class="btn-s btn-naranja text-white px-4 py-1"
+        style="position: absolute; bottom: 10px; font-size: 15px; font-family: asap-regular;"><i class="icon-cart"></i>
+        Contratar</button>
+      </div>
+      <div class="d-flex justify-content-center align-items-center" style="position: relative;"><img class=" planes" src="imagen/PLANES WEB-02.png" style="height: 350px;" />
+      <button class="btn-s btn-naranja text-white px-4 py-1"
+        style="position: absolute; bottom: 10px; font-size: 15px; font-family: asap-regular;"><i class="icon-cart"></i>
+        Contratar</button></div>
+      <div class="d-flex justify-content-center align-items-center" style="position: relative;">
+        <img class=" planes" src="imagen/PLANES WEB_Mesa de trabajo 1.png" style="height: 350px;" />
+        <button class=" btn-s btn-naranja text-white px-4 py-1"
+          style="position: absolute; bottom: 10px; font-size: 15px; font-family: asap-regular;"><i class="icon-cart"></i>
+          Contratar</button>
       </div>
     </div>
 
@@ -207,8 +226,9 @@
           de celular</label>
         <div class="pt-2">
 
-          <button class="btn text-white  " style="background-color: #1a245B; font-family: 'Asap', sans-serif;">
-            Contactar</button>
+          <a class="btn text-white  " href="https://api.whatsapp.com/send?phone=593997500911" target="_blank"
+            style="background-color: #1a245B; font-family: 'Asap', sans-serif;">
+            Contactar</a>
         </div>
       </div>
 
@@ -233,42 +253,48 @@
 
     </div>
     <!--Modal de consulta -->
-    <div class="modal fade" id="exampleModal" tabindex="-1"  aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
           <div class="row">
             <div class="col-12 col-md-6 d-flex justify-content-center align-items-center" style="position: relative;">
               <img class="img-fluid p-0" src="imagen/REFIERE UN AMIGO.png" style="position: relative;" alt="">
-              <button class="bg-light px-3 btn pb-2" style="position: absolute; border: none; bottom: 25px;font-family: 'Asap', sans-serif; color: #1a245B;"> REFERIR</button>
+              <button class="bg-light px-3 btn pb-2"
+                style="position: absolute; border: none; bottom: 25px;font-family: 'Asap', sans-serif; color: #1a245B;">
+                REFERIR</button>
             </div>
             <div class="col-12 col-md-6 ">
-              <img  class="img-fluid px-4" src="imagen/INTERNET_marca speed a color-02.png"/>
+              <img class="img-fluid px-4" src="imagen/INTERNET_marca speed a color-02.png" />
               <div class="container  pt-2" style="line-height: 0.9;">
                 <p style="font-family: asap-regular;">HOLA,</p>
                 <h4 style=" font-family: 'Asap', sans-serif;" id="nombre"></h4>
-                <p style="font-size: 0.9em; font-family: asap-regular;"id="direccion"></p>
-                <p style="font-size: 0.8em; font-family: asap-regular;"id="cantiada"></p>
-               <div class="text-center">
-                <h1 style="font-family: 'Asap', sans-serif; color: #1a245B;" id="total"></h1>
-               </div> 
+                <p style="font-size: 0.9em; font-family: asap-regular;" id="direccion"></p>
+                <p style="font-size: 0.8em; font-family: asap-regular;" id="cantiada"></p>
+                <div class="text-center">
+                  <h1 style="font-family: 'Asap', sans-serif; color: #1a245B;" id="total"></h1>
+                </div>
 
-                  <div class="d-flex flex-row justify-content-center pb-2">
-                    <div>
-                      <button class="close btn text-white px-4 shadow "   style="font-family: 'Asap', sans-serif;background-color: #1a245B;"  data-dismiss="modal"> Ok</button>
-                    </div>
-                    <div class="px-3">
-                      <button class="close btn text-white shadow " id="close" style="font-family: 'Asap', sans-serif; background-color: #1a245B;"  data-dismiss="modal">CLOSE</button>
-                    </div>
-
+                <div class="d-flex flex-row justify-content-center pb-2">
+                  <div>
+                    <button class="close btn text-white px-4 shadow "
+                      style="font-family: 'Asap', sans-serif;background-color: #1a245B;" data-dismiss="modal">
+                      Ok</button>
                   </div>
+                  <div class="px-3">
+                    <button class="close btn text-white shadow " id="close"
+                      style="font-family: 'Asap', sans-serif; background-color: #1a245B;"
+                      data-dismiss="modal">CLOSE</button>
+                  </div>
+
+                </div>
               </div>
 
             </div>
           </div>
-          </div>
+        </div>
       </div>
     </div>
-   
+
     <div class="col-12 col-lg-3 shadow m-2 p-3">
       <div class=" text-center">
         <img style="height: 130px;" class="img-fluid" src="imagen/INTERNET-SPEED_ CONSULTA TU PLAN IDEAL-02.png">
@@ -332,7 +358,6 @@
             <div>
               <img style="height: 50px;" src="imagen/INTERNET-SPEED_ICONO DE WHATSAPP-02.png">
             </div>
-
             <div class=" text-center " style="line-height: 1;" style="font-family: 'Asap', sans-serif;">
               <h1 style=" font-size: 1.em; line-height: 0.5; color: rgb(18, 18, 89);" class=" fw-bold-sm "> REGISTRA
               </h1>
@@ -347,21 +372,19 @@
           </div>
           <img style="height: 60px;" src="imagen/INTERNET_SPEED_ATENCION 247-02.png" alt="">
           <div class="">
-            <button class="btn text-white px-3 " style="background-color: #1a245B; font-family: 'Asap', sans-serif;">
-              Reportar pago</button>
+            <a class="btn text-white px-3 "
+              href="https://api.whatsapp.com/send?phone=593997500911&text=Vi%20su%20pagina%20web,%20quiero%20contratar%20sus%20servicios%20para%20mi%20domicilio"
+              target="_blank" style="background-color: #1a245B; font-family: 'Asap', sans-serif;">
+              Reportar pago</a>
           </div>
-
         </div>
         <div class="d-flex align-items-end justify-content-center  w-100" style="height: auto;">
-
 
           <img style="height: 300px;" class=" img-fluid "
             src="imagen/INTERNET-SPEED_REGISTRA TU PAGO_Mesa de trabajo 1 copia.png">
         </div>
       </div>
-
     </div>
-
     <div class="col-12 col-md-6 col-lg-5 shadow m-2 pt-3  px-3">
       <div class="btn-group-vertical text-center pt-2">
         <div>
@@ -377,31 +400,25 @@
             </div>
           </div>
 
-          <div class=" px-1 d-flex align-items-center "
+          <div class=" px-1 d-flex align-items-center text-center"
             style=" height: 150px; max-height: 150px; font-family: asap-regular;">
-            <p style="font-size: 0.80em; " class="fw-bold">Recibe el 50% de descuento en tu factura
-              por recomendar cliente.
-              Aplica un solo descuento por cada factura
+            <p style="font-size: 0.80em; " class="fw-bold"><span>Recibe el 50% de descuento en tu factura</span>
+              <span>por recomendar cliente.</span>
+              <span>Aplica un solo descuento por cada factura</span>
             </p>
-
           </div>
-
-          <img style="height: 60px;" alt="">
           <div class="">
             <button class="btn text-white px-5 " style="background-color: #1a245B;font-family: 'Asap', sans-serif;">
               Referir </button>
           </div>
+          <img style="height: 60px;" alt="">
         </div>
         <div style="height: 100% !important; width: 100%;" class="">
           <img style="height: 300px;" class=" img-fluid w-100 "
             src="imagen/INTERNET-SPEED_REFIERE UN AMIGO_Mesa de trabajo 1 copia.png">
         </div>
       </div>
-
     </div>
-
-
-
   </div>
   <!--Regalos-->
   <div class=" bg-regalos d-flex flex-row justify-content-center">
@@ -412,10 +429,7 @@
       <div class="col-6">
         <img class="img-fluid" src="imagen/INTERNET-SPEED_ INSTALACION GRATIS_1_Mesa de trabajo 1 copia.png">
       </div>
-
-
     </div>
-
   </div>
   </div>
   <div class="container-fluid pb-5 d-none">
@@ -435,7 +449,6 @@
   </div>
   <!--Planes -->
   <div class="col-10 mx-auto pt-5 d-none" id="planes">
-
     <div class=" d-flex flex-wrap justify-content-center">
       <div class="col-sm-4 col-md-4 col-lg-2 m-4">
         <img src="img/HOME.jpg" class="w-100 cursor planes" />
@@ -452,9 +465,7 @@
       <div class="col-sm-4 col-md-4 col-lg-2 m-4">
         <img src="img/SPEED.jpg" class="w-100 cursor planes" />
       </div>
-
     </div>
-
   </div>
   <section class="bg-infografia d-none">
     <div class=" d-flex flex-wrap justify-content-between align-items-center ">
@@ -463,13 +474,11 @@
       </div>
       <div class="col-4 text-center">
         <img src="img/Navega sin limites.png" class="img-fluid" />
-
       </div>
       <div class="col-4 text-center ">
         <img src="img/Speedman.png" class="img-fluid" />
       </div>
     </div>
-
   </section>
   <section class="bg-app container-fluid d-none">
     <div class="row">
@@ -483,9 +492,7 @@
       <div class="col-6 p-5 m-auto">
         <img src="img/GifCelular.gif" class=" img-fluid h-75 " style="transform: rotate(0deg);" />
       </div>
-
     </div>
-
   </section>
   <div class="row flex-wrap-reverse  container-fluid d-none" style=" margin-bottom: -250px;">
     <div class="col-12 col-md-6 text-center " style=" z-index: 2;">
@@ -500,7 +507,6 @@
           href="https://api.whatsapp.com/send?phone=593997500911&text=Vi%20su%20pagina%20web,%20quiero%20contratar%20sus%20servicios%20para%20mi%20domicilio">Whatsapp
         </a>
       </div>
-
     </div>
   </div>
   <footer class=" container-fluid py-2 mt-5 pt-5 text-white "
