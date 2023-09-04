@@ -232,14 +232,14 @@
                 <label for="validationCustom01" class="font-weight-bold">Seleccione el plan</label> <br>
                 <select class=" form-select" name="planes" id="validationCustom12">
 
-                  <option value=PLAN-HOME> Home - 80Mbps - $22.40 </option>
+                  <option value="PLAN-HOME"> Home - 80Mbps - $22.40 </option>
 
-                  <option value=PLAN-ADVANCE> Silver - 130Mbps - $26.00 </option>
-                  <option value=PLAN-ADVANCE> Advance - 170Mbps - $31.12 </option>
+                  <option value="PLAN-SILVER"> Silver - 130Mbps - $26.00 </option>
+                  <option value="PLAN-ADVANCE"> Advance - 170Mbps - $31.12 </option>
 
-                  <option value=PLAN-PRO> Pro - 220Mbps - $33.60 </option>
+                  <option value="PLAN-PRO"> Pro - 220Mbps - $33.60 </option>
 
-                  <option value=PLAN-GOLD> Speed - 350Mbps - $50.00 </option>
+                  <option value="PLAN-SPEED"> Speed - 350Mbps - $50.00 </option>
 
                 </select>
               </div>
@@ -394,6 +394,15 @@
         });
       }, false);
     })();
+    (function () {
+      let planes = localStorage.getItem("PLANES")
+      let plan = document.getElementById("validationCustom12")
+      console.log(planes)
+      if (planes != null || planes != "") {
+        console.log(planes)
+        plan.value = planes
+      }
+    })()
     document.getElementById("btn_enviar_cont").addEventListener("click", function (e) {
       e.preventDefault()
       const form = new FormData(document.getElementById("preregistro"))
@@ -721,23 +730,7 @@
 
 
   <script type="text/javascript">
-    $(document).ready(function () {
-      $("#sidebar").mCustomScrollbar({
-        theme: "minimal"
-      });
 
-      $('#dismiss, .overlay').on('click', function () {
-        $('#sidebar').removeClass('active');
-        $('.overlay').removeClass('active');
-      });
-
-      $('#sidebarCollapse').on('click', function () {
-        $('#sidebar').addClass('active');
-        $('.overlay').addClass('active');
-        $('.collapse.in').toggleClass('in');
-        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
-      });
-    });
   </script>
 </body>
 

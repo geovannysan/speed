@@ -12,12 +12,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="icon" href="/imagen/INTERNET_marca speed a color-02.png" sizes="any" />
-    <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate">
   <meta name="viewport"
     content="width=device-width, initial-scale=1.0, user-scalable=no, maximun-scalable=1.0, maximun-scalable=1.0">
   <title>Speed</title>
   <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Asap:wght@100;600&display=swap" rel="stylesheet">
   <!--CSS-->
   <script src="https://code.jquery.com/jquery-latest.min.js"></script>
   <link rel="stylesheet" href="css/styles.css">
@@ -39,10 +41,7 @@
   <script src="js/wow.min.js"></script>
   <script> new WOW().init();</script>
 </head>
-
-<body style="font-family: 'Quicksand', sans-serif;"><!--Inicio proyecto-->
-
-
+<body><!--Inicio proyecto-->
   <div class=" d-flex  align-items-center justify-content-end bg-speed w-100 " style="height: 60px;">
     <li class="nav-item d-block float-end d-flex justify-content-end ">
       <div class="d-flex justify-content-center">
@@ -120,9 +119,6 @@
 
         </ul>
       </div>
-
-
-
     </div>
   </nav>
   <!--Header-->
@@ -178,35 +174,42 @@
           óptica para el hogar </h4>
       </div>
     </div>
-
     <div class="slick-carousel container ">
       <div class="d-flex justify-content-center align-items-center" style="position: relative;">
         <img class="  planes" src="imagen/PLANES WEB-05.png" style="height: 350px;" />
-      <button class="btn-s btn-naranja text-white px-4 py-1" style="position: absolute; bottom: 10px; font-size: 15px; font-family: asap-regular;" ><i class="icon-cart"></i> Contratar</button>
+        <button onclick="MostarPlan('PLAN-HOME')" class="btn-s btn-naranja text-white px-4 py-1"
+          style="position: absolute; bottom: 10px; font-size: 15px; font-family: asap-regular;"><i
+            class="icon-cart"></i> Contratar</button>
       </div>
-      <div class="d-flex justify-content-center align-items-center" style="position: relative;"><img class="  planes" src="imagen/PLANES WEB-04.png" style="height: 350px;" />
-      <button class="btn-s btn-naranja text-white px-4 py-1"
-        style="position: absolute; bottom: 10px; font-size: 15px; font-family: asap-regular;"><i class="icon-cart"></i>
-        Contratar</button>
+      <div class="d-flex justify-content-center align-items-center" style="position: relative;"><img class="  planes"
+          src="imagen/PLANES WEB-04.png" style="height: 350px;" />
+        <button onclick="MostarPlan('PLAN-SILVER')" class="btn-s btn-naranja text-white px-4 py-1"
+          style="position: absolute; bottom: 10px; font-size: 15px; font-family: asap-regular;"><i
+            class="icon-cart"></i>
+          Contratar</button>
       </div>
       <div class="d-flex justify-content-center align-items-center" style="position: relative;">
         <img class=" planes" src="imagen/PLANES WEB-03.png" style="height: 350px;" />
-      <button class="btn-s btn-naranja text-white px-4 py-1"
-        style="position: absolute; bottom: 10px; font-size: 15px; font-family: asap-regular;"><i class="icon-cart"></i>
-        Contratar</button>
+        <button onclick="MostarPlan('PLAN-ADVANCE')" class="btn-s btn-naranja text-white px-4 py-1"
+          style="position: absolute; bottom: 10px; font-size: 15px; font-family: asap-regular;"><i
+            class="icon-cart"></i>
+          Contratar</button>
       </div>
-      <div class="d-flex justify-content-center align-items-center" style="position: relative;"><img class=" planes" src="imagen/PLANES WEB-02.png" style="height: 350px;" />
-      <button class="btn-s btn-naranja text-white px-4 py-1"
-        style="position: absolute; bottom: 10px; font-size: 15px; font-family: asap-regular;"><i class="icon-cart"></i>
-        Contratar</button></div>
+      <div class="d-flex justify-content-center align-items-center" style="position: relative;"><img class=" planes"
+          src="imagen/PLANES WEB-02.png" style="height: 350px;" />
+        <button onclick="MostarPlan('PLAN-PRO')" class="btn-s btn-naranja text-white px-4 py-1"
+          style="position: absolute; bottom: 10px; font-size: 15px; font-family: asap-regular;"><i
+            class="icon-cart"></i>
+          Contratar</button>
+      </div>
       <div class="d-flex justify-content-center align-items-center" style="position: relative;">
         <img class=" planes" src="imagen/PLANES WEB_Mesa de trabajo 1.png" style="height: 350px;" />
-        <button class=" btn-s btn-naranja text-white px-4 py-1"
-          style="position: absolute; bottom: 10px; font-size: 15px; font-family: asap-regular;"><i class="icon-cart"></i>
+        <button onclick="MostarPlan('PLAN-SPEED')" class=" btn-s btn-naranja text-white px-4 py-1"
+          style="position: absolute; bottom: 10px; font-size: 15px; font-family: asap-regular;"><i
+            class="icon-cart"></i>
           Contratar</button>
       </div>
     </div>
-
     <div class=" container d-flex justify-content-center my-3">
       <button class=" btn text-white bg-speed px-5"
         style="background-color: #1a245B!important;font-family: 'Asap', sans-serif; ">
@@ -233,9 +236,7 @@
             Contactar</a>
         </div>
       </div>
-
     </div>
-
     <div class="col-12 col-lg-3 shadow m-2 p-3">
       <div class=" text-center">
         <img style="height: 130px;" class="img-fluid" src="imagen/INTERNET-SPEED_ CONSULTA TU FACTURA-02.png">
@@ -244,59 +245,16 @@
           factura</p>
         <span class="fw-bold w-100" style="font-size: 0.8rem; font-family: asap-regular;">Revisa el valor de tu
           factura</span>
-        <label class=" form-label  form-label-lg" style="font-family: 'Asap', sans-serif;">titular del servicio</label>
-        <input class=" form-control " type="number" id="numberce" placeholder="Nª cédula" />
+        <label class="numero form-label  form-label-lg" style="font-family: 'Asap', sans-serif;">titular del
+          servicio</label>
+        <input class="numero form-control " type="" id="numberce" placeholder="Nª cédula" />
         <div class="pt-2">
           <button class="btn text-white   " id="btn-consulta"
             style="background-color:#1a245B; font-family: 'Asap', sans-serif;">
             Consultar</button>
         </div>
       </div>
-
     </div>
-    <!--Modal de consulta -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content">
-          <div class="row">
-            <div class="col-12 col-md-6 d-flex justify-content-center align-items-center" style="position: relative;">
-              <img class="img-fluid p-0" src="imagen/REFIERE UN AMIGO.png" style="position: relative;" alt="">
-              <button class="bg-light px-3 btn pb-2"
-                style="position: absolute; border: none; bottom: 25px;font-family: 'Asap', sans-serif; color: #1a245B;">
-                REFERIR</button>
-            </div>
-            <div class="col-12 col-md-6 ">
-              <img class="img-fluid px-4" src="imagen/INTERNET_marca speed a color-02.png" />
-              <div class="container  pt-2" style="line-height: 0.9;">
-                <p style="font-family: asap-regular;">HOLA,</p>
-                <h4 style=" font-family: 'Asap', sans-serif;" id="nombre"></h4>
-                <p style="font-size: 0.9em; font-family: asap-regular;" id="direccion"></p>
-                <p style="font-size: 0.8em; font-family: asap-regular;" id="cantiada"></p>
-                <div class="text-center">
-                  <h1 style="font-family: 'Asap', sans-serif; color: #1a245B;" id="total"></h1>
-                </div>
-
-                <div class="d-flex flex-row justify-content-center pb-2">
-                  <div>
-                    <button class="close btn text-white px-4 shadow "
-                      style="font-family: 'Asap', sans-serif;background-color: #1a245B;" data-dismiss="modal">
-                      Ok</button>
-                  </div>
-                  <div class="px-3">
-                    <button class="close btn text-white shadow " id="close"
-                      style="font-family: 'Asap', sans-serif; background-color: #1a245B;"
-                      data-dismiss="modal">CLOSE</button>
-                  </div>
-
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <div class="col-12 col-lg-3 shadow m-2 p-3">
       <div class=" text-center">
         <img style="height: 130px;" class="img-fluid" src="imagen/INTERNET-SPEED_ CONSULTA TU PLAN IDEAL-02.png">
@@ -310,17 +268,13 @@
             Calcular</button>
         </div>
       </div>
-
-
     </div>
-
   </div>
   <!--App-->
   <div id="app" class=" container-fluid  bg-speedapp">
     <div class="row">
       <div class="col-12 col-md-7 py-2">
         <img src="/imagen/CELULARES DE APP CON CAMBIOS_Mesa de trabajo 1.png" class=" img-fluid" />
-
       </div>
       <div class="col-12 col-md-5 d-flex justify-content-center align-items-center pt-5 pb-3">
         <div class="px-5">
@@ -331,27 +285,18 @@
           <div class="row col-12 col-md-8">
             <div>
               <img src="imagen/INTERNET-SPEED_ APP DISPONIBLE EN APP STORE_Mesa de trabajo 1 copia.png"
-                class=" img-fluid " style="height:75px; width: 200px;
-               
-                ">
+                class=" img-fluid " style="height:75px; width: 200px;">
             </div>
             <div class="px-3">
               <button class="btn bg-white fw-bold "
                 style="height: 50px; width:190px;font-family: 'Asap', sans-serif; ">Descarga App</button>
             </div>
           </div>
-
         </div>
-
       </div>
-
     </div>
-
   </div>
   <!--Registro pagos-->
-  <div class=" container d-flex flex-wrap justify-content-between align-items-center">
-
-  </div>
   <div id="reportar" class="container row col-12 col-sm-9   d-flex justify-content-around py-5 mx-auto ">
     <div class="col-12 col-md-6 col-lg-5 shadow m-2 pt-3  px-3">
       <div class="btn-group-vertical text-center pt-2">
@@ -423,95 +368,27 @@
     </div>
   </div>
   <!--Regalos-->
-  <div class=" bg-regalos d-flex flex-row justify-content-center">
-    <div class="col-12 col-md-9 row">
-      <div class="col-6">
-        <img class="img-fluid" src="imagen/INTERNET-SPEED_ INSTALACION GRATIS ICON_Mesa de trabajo 1 copia.png">
+  <div class="" style="position: relative;">
+    <div class=" bg-regalos d-flex flex-row justify-content-center w-100 h-100">
+    
+    </div>
+    <div class="d-flex justify-content-center" style="position: absolute; bottom: 0px;">
+
+    
+    <div class=" col-12 col-md-9 row"  >
+      <div class="col-6 ">
+        <img class="img-fluid " src="imagen/INTERNET-SPEED_ INSTALACION GRATIS ICON_Mesa de trabajo 1 copia.png">
       </div>
-      <div class="col-6">
+      <div class="col-6 ">
         <img class="img-fluid" src="imagen/INTERNET-SPEED_ INSTALACION GRATIS_1_Mesa de trabajo 1 copia.png">
       </div>
     </div>
-  </div>
-  </div>
-  <div class="container-fluid pb-5 d-none">
-    <div class="container text-center">
-      <div class="row ">
-        <div class="col-md-6 ">
-          <img src="img/Redes Sociales.png" class="img-fluid" />
-        </div>
-        <div class="col-md-6">
-          <img src="img/Soporte Tecnico.png" class="img-fluid" />
-        </div>
-        <div class="col-md-4 d-none">
-          <img src="img/CallCenter.png" class="img-fluid" />
-        </div>
-      </div>
     </div>
   </div>
-  <!--Planes -->
-  <div class="col-10 mx-auto pt-5 d-none" id="planes">
-    <div class=" d-flex flex-wrap justify-content-center">
-      <div class="col-sm-4 col-md-4 col-lg-2 m-4">
-        <img src="img/HOME.jpg" class="w-100 cursor planes" />
-      </div>
-      <div class="col-sm-4 col-md-4 col-lg-2 m-4">
-        <img src="img/SILVER.jpg" class="w-100 cursor planes " />
-      </div>
-      <div class="col-sm-4 col-md-4 col-lg-2 m-4">
-        <img src="img/ADVANCE.jpg" class="w-100 cursor planes" />
-      </div>
-      <div class="col-sm-4 col-md-4 col-lg-2 m-4">
-        <img src="img/PRO.jpg" class="w-100 cursor planes" />
-      </div>
-      <div class="col-sm-4 col-md-4 col-lg-2 m-4">
-        <img src="img/SPEED.jpg" class="w-100 cursor planes" />
-      </div>
-    </div>
+ 
   </div>
-  <section class="bg-infografia d-none">
-    <div class=" d-flex flex-wrap justify-content-between align-items-center ">
-      <div class="col-4 text-center">
-        <img src="img/Nuestros Planes.png" class="img-fluid" />
-      </div>
-      <div class="col-4 text-center">
-        <img src="img/Navega sin limites.png" class="img-fluid" />
-      </div>
-      <div class="col-4 text-center ">
-        <img src="img/Speedman.png" class="img-fluid" />
-      </div>
-    </div>
-  </section>
-  <section class="bg-app container-fluid d-none">
-    <div class="row">
-      <div class="col-12 col-md-6 p-5 text-center m-auto animate__ animate__bounceInDown animated"
-        style="visibility: visible; animation-name: bounceInDown;">
-        <img src="img/Descagra la APP.png" class="w-75" />
-        <img src="img/01-xiaomi-redmi-note-11-pro-128gb-azul-front.png" class="w-75" />
-        <a href="https://play.google.com/store/apps/details?id=app.ec.comnet" target="_blank"> <img
-            src="img/Google-Play.png" class="w-25"></img></a>
-      </div>
-      <div class="col-6 p-5 m-auto">
-        <img src="img/GifCelular.gif" class=" img-fluid h-75 " style="transform: rotate(0deg);" />
-      </div>
-    </div>
-  </section>
-  <div class="row flex-wrap-reverse  container-fluid d-none" style=" margin-bottom: -250px;">
-    <div class="col-12 col-md-6 text-center " style=" z-index: 2;">
-      <img src="img/Personaje.png" class="w-75" />
-    </div>
-    <div class="col-12 col-md-6 text-center mt-3 " style="z-index: 2;">
-      <img src="img/RegistratuPAGO.png" class="w-75   pb-4" />
-      <div class=" text-secondary " style="line-height: 0.3em; font-weight: bold;">
-        <p>REGISTRA TU PAGO Y CAMBIA TU CLAVE </p>
-        <p>WIFI CON TU ASSISTENTE VIRTUAL</p>
-        <a class=" btn  btn-success" target="_blank"
-          href="https://api.whatsapp.com/send?phone=593997500911&text=Vi%20su%20pagina%20web,%20quiero%20contratar%20sus%20servicios%20para%20mi%20domicilio">Whatsapp
-        </a>
-      </div>
-    </div>
-  </div>
-  <footer class=" container-fluid py-2 mt-5 pt-5 text-white "
+  <!--footer -->
+  <footer class=" container-fluid py-2  text-white "
     style="position: absolute; background-color: #1a245B;font-family: asap-regular;"> <!-- FOOTER-->
     <div class="row px-2">
       <div class=" col-md-3 px-3">
@@ -681,19 +558,148 @@
           Marca registrada de Computecnicsnet S.A (Comnet)</a></li>
     </div>
   </footer>
+  <!--Modales-->
+  <!--Modal de consulta -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="row">
+          <div class="col-12 col-md-6 d-flex justify-content-center align-items-center" style="position: relative;">
+            <img class="img-fluid p-0" src="imagen/REFIERE UN AMIGO.png" style="position: relative;" alt="">
+            <button class="bg-light px-3 btn pb-2"
+              style="position: absolute; border: none; bottom: 25px;font-family: 'Asap', sans-serif; color: #1a245B;">
+              REFERIR</button>
+          </div>
+          <div class="col-12 col-md-6 ">
+            <img class="img-fluid px-4" src="imagen/INTERNET_marca speed a color-02.png" />
+            <div class="container  pt-2" style="line-height: 0.9;">
+              <p style="font-family: asap-regular;">HOLA,</p>
+              <h4 style=" font-family: 'Asap', sans-serif;" id="nombre"></h4>
+              <p style="font-size: 0.9em; font-family: asap-regular;" id="direccion"></p>
+              <p style="font-size: 0.8em; font-family: asap-regular;" id="cantiada"></p>
+              <div class="text-center">
+                <h1 style="font-family: 'Asap', sans-serif; color: #1a245B;" id="total"></h1>
+              </div>
 
+              <div class="d-flex flex-row justify-content-center pb-2">
+                <div>
+                  <button class="close btn text-white px-4 shadow "
+                    style="font-family: 'Asap', sans-serif;background-color: #1a245B;" data-dismiss="modal">
+                    Ok</button>
+                </div>
+                <div class="px-3">
+                  <button class="close btn text-white shadow " id="close"
+                    style="font-family: 'Asap', sans-serif; background-color: #1a245B;"
+                    data-dismiss="modal">CLOSE</button>
+                </div>
 
+              </div>
+            </div>
 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="preguntaModal" tabindex="-1" aria-labelledby="preguntaModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="  d-flex justify-content-end text-end">
+          <button type="button" class="pregunta btn" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="row">
+          <div class="col-12 text-center  ">
+            <img class="img-fluid px-4" src="imagen/INTERNET_marca speed a color-02.png" />
+            <div class="container  pt-2" style="line-height: 0.9;">
+              <h3 style="font-family: asap-regular;">Deseas calcular tu plani ideal</h3>
+              <div class="d-flex flex-row justify-content-center pb-2">
+                <div>
+                  <button class="calcular btn text-white px-4 shadow "
+                    style="font-family: 'Asap', sans-serif;background-color: #1a245B;" data-dismiss="modal">
+                    Calcular </button>
+                </div>
+                <div class="px-3">
+                  <a onclick="rediret()" class=" btn text-white shadow " id="close"
+                    style="font-family: 'Asap', sans-serif; background-color: #1a245B;"
+                    data-dismiss="modal">Continuar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="calculosModal" tabindex="-1" aria-labelledby="calculosmodalModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered ">
+      <div class="modal-content">
+        <div class="row">
+          <div class="col-12 col-md-6 d-none d-flex justify-content-center align-items-center" style="position: relative;">
+            <img class="img-fluid p-0" src="imagen/REFIERE UN AMIGO.png" style="position: relative;" alt="">
+            <button class="bg-light px-3 btn pb-2"
+              style="position: absolute; border: none; bottom: 25px;font-family: 'Asap', sans-serif; color: #1a245B;">
+              REFERIR</button>
+          </div>
+          <div class="col-12  ">
+
+            <div class="container  pt-2" style="line-height: 0.9;">
+            <div class="row">
+              <div class="container">
+                <label class=" form-label">Cantidad de Celular</label>
+                <input id="phone" class="numero form-control" />
+              </div>
+              <div class="container">
+                <label class=" form-label">Cantidad de Televisor</label>
+                <input id="televi"  class="numero form-control" />
+              </div>
+              <div class="container">
+                <label class=" form-label">Cantiada de Computadora o Laptos</label>
+                <input id="computer" class="numero form-control" />
+              </div>
+            </div>
+            </div>
+
+            <div class="d-flex flex-row justify-content-center pb-2">
+              <div>
+                <button id="calcular" class=" btn text-white px-4 shadow "
+                  style="font-family: 'Asap', sans-serif;background-color: #1a245B;" data-dismiss="modal">
+                  Calcular</button>
+              </div>
+              <div class="px-3">
+                <button class="close btn text-white shadow " id="close"
+                  style="font-family: 'Asap', sans-serif; background-color: #1a245B;"
+                  data-dismiss="modal">Elegir</button>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
 
   <!--Fin proyecto-->
   <!--Js-->
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
-
   <script src="js/bootstrap.bundle.js"></script>
   <script src="js/wow.min.js"></script>
   <script src="js/carrusel.js"></script>
+  <script src="js/planes.js"></script>
 
 </body>
+  <script>
 
+    $(".numero").keypress(function (e) {
+      var n = (e = e || window.event).keyCode || e.which,
+        t = -1 != "0123456789".indexOf(String.fromCharCode(n));
+      (t = 8 == n || n >= 35 && n <= 40 || 46 == n || t) || (e.returnValue = !1, e.preventDefault && e.preventDefault())
+    })
+
+  </script>
 </html>

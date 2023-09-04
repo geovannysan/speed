@@ -78,19 +78,34 @@ let direcion = document.getElementById("direccion")
 let cantidad = document.getElementById("cantiada")
 let valor = document.getElementById("total")
 let cerr = document.querySelector(".close")
+let calcular = document.querySelector(".calcular")
 let cerrar = document.getElementById("close")
 var myModal = new bootstrap.Modal(document.getElementById('exampleModal'));
-cerr.addEventListener("click", function () {
-    console.log("click")
-    
-    myModal.hide();
+var modalConsulta = new bootstrap.Modal(document.getElementById('preguntaModal'))
+var modalcalular = new bootstrap.Modal(document.getElementById('calculosModal'))
+var cerrarpregunta = document.querySelector(".pregunta")
+//modalConsulta.show();
+document.querySelector('.modal').classList.add('zoom');
+cerr.addEventListener("click", function () { myModal.hide(); })
+calcular.addEventListener("click", function () {
+    modalConsulta.hide();
+    modalcalular.show();
 })
 cerrar.addEventListener("click", function () {
-    console.log("click")
-
     myModal.hide();
 })
-
+cerrarpregunta.addEventListener("click", function () {
+    console.log("cloc")
+    modalConsulta.hide();
+})
+function MostarPlan(e) {
+    modalConsulta.show();
+    localStorage.setItem("PLANES", e)
+}
+function rediret() {
+    localStorage.setItem("PLANES", "")
+    window.location.href = "contratar.html"
+}
 boton.addEventListener('click', function (e) {
     console.log(cedual.value)
 
@@ -105,7 +120,7 @@ boton.addEventListener('click', function (e) {
         if (oupt.estado == "exito") {
             let datos = oupt.datos[0]
 
-           
+
             myModal.show();
             document.querySelector('.modal').classList.add('zoom');
             nombr.innerHTML = datos.nombre

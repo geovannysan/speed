@@ -24,6 +24,7 @@
     background: url('/imagen/regalos.png');
     background-position: center;
     background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .bg-header-sm {
