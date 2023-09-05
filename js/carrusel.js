@@ -79,6 +79,7 @@ let cantidad = document.getElementById("cantiada")
 let valor = document.getElementById("total")
 let cerr = document.querySelector(".close")
 let calcular = document.querySelector(".calcular")
+let calcularcarr = document.querySelector(".calcularcarr")
 let cerrar = document.getElementById("close")
 var myModal = new bootstrap.Modal(document.getElementById('exampleModal'));
 var modalConsulta = new bootstrap.Modal(document.getElementById('preguntaModal'))
@@ -88,6 +89,14 @@ var cerrarpregunta = document.querySelector(".pregunta")
 document.querySelector('.modal').classList.add('zoom');
 cerr.addEventListener("click", function () { myModal.hide(); })
 calcular.addEventListener("click", function () {
+    const imgElement = document.getElementById('planesimagen');
+    imgElement.src = '/imagen/PLANES WEB-05.png';
+    modalConsulta.hide();
+    modalcalular.show();
+})
+calcularcarr.addEventListener("click", function () {
+    const imgElement = document.getElementById('planesimagen');
+    imgElement.src = '/imagen/PLANES WEB-05.png';
     modalConsulta.hide();
     modalcalular.show();
 })
@@ -101,9 +110,11 @@ cerrarpregunta.addEventListener("click", function () {
 function MostarPlan(e) {
     modalConsulta.show();
     localStorage.setItem("PLANES", e)
+    const imgElement = document.getElementById('planesimagen');
+    imgElement.src = '/imagen/PLANES WEB-05.png';
 }
 function rediret() {
-    localStorage.setItem("PLANES", "")
+    //localStorage.setItem("PLANES", "")
     window.location.href = "contratar.html"
 }
 boton.addEventListener('click', function (e) {
