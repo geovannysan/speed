@@ -82,9 +82,11 @@ let calcular = document.querySelector(".calcular")
 let calcularcarr = document.querySelector(".calcularcarr")
 let cerrar = document.getElementById("close")
 var myModal = new bootstrap.Modal(document.getElementById('exampleModal'));
-var modalConsulta = new bootstrap.Modal(document.getElementById('preguntaModal'))
+var modalConsulta = new bootstrap.Modal(document.getElementById('calculosModal'))
 var modalcalular = new bootstrap.Modal(document.getElementById('calculosModal'))
 var cerrarpregunta = document.querySelector(".pregunta")
+
+const imgElement = document.getElementById('imagenplan');
 //modalConsulta.show();
 document.querySelector('.modal').classList.add('zoom');
 cerr.addEventListener("click", function () { myModal.hide(); })
@@ -95,8 +97,7 @@ calcular.addEventListener("click", function () {
     modalcalular.show();
 })
 calcularcarr.addEventListener("click", function () {
-    const imgElement = document.getElementById('planesimagen');
-    imgElement.src = '/imagen/PLANES WEB-05.png';
+    imgElement.src = 'imagen/PLANES WEB-05.png';
     modalConsulta.hide();
     modalcalular.show();
 })
@@ -107,12 +108,14 @@ cerrarpregunta.addEventListener("click", function () {
     console.log("cloc")
     modalConsulta.hide();
 })
-function MostarPlan(e) {
+function MostarPlan(e,J) {
     modalConsulta.show();
     localStorage.setItem("PLANES", e)
-    const imgElement = document.getElementById('planesimagen');
-    imgElement.src = '/imagen/PLANES WEB-05.png';
+    imgElement.src = "imagen/"+J+".PNG";
 }
+document.querySelector('.btn-close').addEventListener('click',()=>{
+    modalConsulta.hide()
+})
 function rediret() {
     //localStorage.setItem("PLANES", "")
     window.location.href = "contratar.html"
