@@ -38,11 +38,10 @@ const swiper = new Swiper('.swiper-container', {
 });
 $(document).ready(function () {
     $('.slick-carousel').slick({
-        slidesToShow: 3, // Cambia a 3 para mostrar más elementos
+        slidesToShow: 3,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 3000,
-        // Activa el modo centrado
         responsive: [
             {
                 breakpoint: 800,
@@ -111,7 +110,7 @@ cerrarpregunta.addEventListener("click", function () {
 function MostarPlan(e,J) {
     modalConsulta.show();
     localStorage.setItem("PLANES", e)
-    imgElement.src = "imagen/"+J+".PNG";
+    imgElement.src = "imagen/"+J+".png";
 }
 document.querySelector('.btn-close').addEventListener('click',()=>{
     modalConsulta.hide()
