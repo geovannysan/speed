@@ -43,20 +43,20 @@ seleccionModalback.addEventListener("click", function () {
     modalcalular.show()
 })
 continuarpiso.addEventListener("click", function () {
-    pisosModal.show()
+    opcionesModal.show()
     seleccioncasa.hide()
 })
 pisomodalback.addEventListener("click", function () {
-    pisosModal.hide()
+    opcionesModal.hide()
     seleccioncasa.show()
 })
 continuaropcion.addEventListener("click", function () {
     opcionesModal.show()
-    pisosModal.hide()
+    seleccioncasa.hide()
 })
 opcionesback.addEventListener("click", function () {
     opcionesModal.hide()
-    pisosModal.show()
+    seleccioncasa.show()
 })
 continuadevice.addEventListener('click', () => {
     dispositivosModal.show()
