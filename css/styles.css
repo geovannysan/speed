@@ -13,7 +13,12 @@
 
     height: 720px;
 }
-
+@font-face {
+    font-family: 'asap-regular';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Asap Regular'), local('Asap-Regular'), url(http://fonts.gstatic.com/s/asap/v5/-KZsao_xwBpcExaHoPH8_w.ttf) format('truetype');
+}
 .bg-speedapp {
     background: url('/imagen/INTERNET-SPEED_ FONDO DE APP_Mesa de trabajo 1 copia 2.png');
     background-size: cover;

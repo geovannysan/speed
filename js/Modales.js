@@ -21,8 +21,8 @@ let estimadoModal = new bootstrap.Modal(document.getElementById('estimadoModal')
 let megas = 0
 
 let cantidadclick = {
-    "pequeña": 10,
-    "mediana": 20,
+    "pequeña": 20,
+    "mediana": 40,
     "grande": 30,
     "uno": 10,
     "dos": 20,
@@ -75,16 +75,21 @@ dispositivoback.addEventListener('click', function () {
 //#2596be
 let registrapago = document.getElementById('registrapago')
 registrapago.addEventListener('click', () => {
+
+    const elemento = document.getElementById("plansuge");
+    console.log("aqui")
+    window.open("https://api.whatsapp.com/send?phone=593997500911&amp;text=Vi%20su%20pagina%20web,%20quiero%20contratar%20sus%20servicios%20para%20mi%20domicilio", '_blank'
+)
     if (megas < 120) {
         elemento.style.backgroundColor = "#2596be";
         elemento.textContent = "Plan Home"
-        imagen.src = "/imagen/SPEED_INTERNETHOME.png"
+       // imagen.src = "/imagen/SPEED_INTERNETHOME.png"
         localStorage.setItem("PLANES", "PLAN-HOME")
     }
     if (megas >= 120 && megas <= 150) {
         elemento.style.backgroundColor = "#54ab34";
         elemento.textContent = "Plan Silver"
-        imagen.src = "/imagen/SPEED_INTERNETSILVER.png"
+       // imagen.src = "/imagen/SPEED_INTERNETSILVER.png"
         localStorage.setItem("PLANES", "PLAN-SILVER")
     }
     if (megas >= 180 && megas < 200) {
@@ -96,13 +101,13 @@ registrapago.addEventListener('click', () => {
     if (megas >= 200 && megas < 220) {
         elemento.style.backgroundColor = "#5db7af";
         elemento.textContent = "Plan Pro"
-        imagen.src = "/imagen/SPEED_INTERNETPRO.png"
+       // imagen.src = "/imagen/SPEED_INTERNETPRO.png"
         localStorage.setItem("PLANES", "PLAN-PRO")
     }
     if (megas >= 220) {
         elemento.style.backgroundColor = "#fb5b24";
         elemento.textContent = "Plan Speed"
-        imagen.src = "/imagen/SPEED_INTERNETSPEED.png"
+       // imagen.src = "/imagen/SPEED_INTERNETSPEED.png"
         localStorage.setItem("PLANES", "PLAN-SPEED")
     }
 })
