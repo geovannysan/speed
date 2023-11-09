@@ -139,7 +139,7 @@
                 <label for="validationCustom01">Cédula, RUC o Pasaporte</label>
                 <input type="number" name="cedularuc" class="numero form-control  " id="ruc" maxlength="13"
                   onblur="validarDocumento()" placeholder="" required>
-                <div class="valid-feedback"> fff </div>
+                <div class="valid-feedback">  </div>
               </div>
             </div>
 
@@ -370,7 +370,7 @@
     const preregistro = async (parms) => {
       //https://rec.netbot.ec/mikroti
       try {
-        let { data } = await axios.post("https://rec.netbot.ec/mikroti/PreregistroApi/PreRegistro", parms)
+        let { data } = await axios.post("https://api.t-ickets.com/mikroti/PreregistroApi/PreRegistro", parms)
         return data
       } catch (error) {
         return error
