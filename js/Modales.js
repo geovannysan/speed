@@ -17,6 +17,7 @@ let dispositivosModal = new bootstrap.Modal(document.getElementById('dispositivo
 let dispositivocontenedor = document.getElementById('dispositivocontenedor')
 var modalcalular = new bootstrap.Modal(document.getElementById('calculosModal'))
 let estimadoModal = new bootstrap.Modal(document.getElementById('estimadoModal'))
+let puntosdePagos = new bootstrap.Modal(document.getElementById('puntosDePago'))
 //estimadoModal.show()
 let megas = 0
 
@@ -33,7 +34,9 @@ let cantidadclick = {
     "ocho": 85,
     "dies": 108
 }
-
+function abrirPuntos() {
+    puntosdePagos.toggle()
+}
 calcularplan.addEventListener("click", function () {
     seleccioncasa.show()
     modalcalular.hide()
@@ -79,17 +82,17 @@ registrapago.addEventListener('click', () => {
     const elemento = document.getElementById("plansuge");
     console.log("aqui")
     window.open("https://api.whatsapp.com/send?phone=593997500911&amp;text=Vi%20su%20pagina%20web,%20quiero%20contratar%20sus%20servicios%20para%20mi%20domicilio", '_blank'
-)
+    )
     if (megas < 120) {
         elemento.style.backgroundColor = "#2596be";
         elemento.textContent = "Plan Home"
-       // imagen.src = "/imagen/SPEED_INTERNETHOME.png"
+        // imagen.src = "/imagen/SPEED_INTERNETHOME.png"
         localStorage.setItem("PLANES", "PLAN-HOME")
     }
     if (megas >= 120 && megas <= 150) {
         elemento.style.backgroundColor = "#54ab34";
         elemento.textContent = "Plan Silver"
-       // imagen.src = "/imagen/SPEED_INTERNETSILVER.png"
+        // imagen.src = "/imagen/SPEED_INTERNETSILVER.png"
         localStorage.setItem("PLANES", "PLAN-SILVER")
     }
     if (megas >= 180 && megas < 200) {
@@ -101,13 +104,13 @@ registrapago.addEventListener('click', () => {
     if (megas >= 200 && megas < 220) {
         elemento.style.backgroundColor = "#5db7af";
         elemento.textContent = "Plan Pro"
-       // imagen.src = "/imagen/SPEED_INTERNETPRO.png"
+        // imagen.src = "/imagen/SPEED_INTERNETPRO.png"
         localStorage.setItem("PLANES", "PLAN-PRO")
     }
     if (megas >= 220) {
         elemento.style.backgroundColor = "#fb5b24";
         elemento.textContent = "Plan Speed"
-       // imagen.src = "/imagen/SPEED_INTERNETSPEED.png"
+        // imagen.src = "/imagen/SPEED_INTERNETSPEED.png"
         localStorage.setItem("PLANES", "PLAN-SPEED")
     }
 })
@@ -119,13 +122,13 @@ continuarestimado.addEventListener("click", function () {
         elemento.style.backgroundColor = "#2596be";
         elemento.textContent = "Plan Home"
         imagen.src = "/imagen/SPEED_INTERNETHOME.png"
-        
+
     }
     if (megas >= 120 && megas <= 150) {
         localStorage.setItem("PLANES", "PLAN-SILVER")
         elemento.style.backgroundColor = "#54ab34";
         elemento.textContent = "Plan Silver"
-        imagen.src = "/imagen/SPEED_INTERNETSILVER.png"       
+        imagen.src = "/imagen/SPEED_INTERNETSILVER.png"
     }
     if (megas >= 180 && megas < 200) {
         localStorage.setItem("PLANES", "PLAN-ADVANCE")
@@ -137,13 +140,13 @@ continuarestimado.addEventListener("click", function () {
         localStorage.setItem("PLANES", "PLAN-PRO")
         elemento.style.backgroundColor = "#7c14ab";
         elemento.textContent = "Plan Pro"
-        imagen.src = "/imagen/SPEED_INTERNETPRO.png"        
+        imagen.src = "/imagen/SPEED_INTERNETPRO.png"
     }
     if (megas >= 220) {
         localStorage.setItem("PLANES", "PLAN-SPEED")
         elemento.style.backgroundColor = "#fb5b24";
         elemento.textContent = "Plan Speed"
-        imagen.src = "/imagen/SPEED_INTERNETSPEED.png"        
+        imagen.src = "/imagen/SPEED_INTERNETSPEED.png"
     }
     dispositivosModal.hide()
     estimadoModal.show()

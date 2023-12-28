@@ -107,12 +107,12 @@ cerrarpregunta.addEventListener("click", function () {
     console.log("cloc")
     modalConsulta.hide();
 })
-function MostarPlan(e,J) {
+function MostarPlan(e, J) {
     modalConsulta.show();
     localStorage.setItem("PLANES", e)
-    imgElement.src = "imagen/"+J+".png";
+    imgElement.src = "imagen/" + J + ".png";
 }
-document.querySelector('.btn-close').addEventListener('click',()=>{
+document.querySelector('.btn-close').addEventListener('click', () => {
     modalConsulta.hide()
 })
 function rediret() {
@@ -137,7 +137,7 @@ boton.addEventListener('click', function (e) {
             myModal.show();
             document.querySelector('.modal').classList.add('zoom');
             nombr.innerHTML = datos.nombre
-            direcion.innerHTML = datos.direccion_principal
+            direcion.innerHTML = ""// datos.direccion_principal
             cantidad.innerHTML = "Total de Facturas impagas: " + datos.facturacion.facturas_nopagadas
             valor.textContent = datos.facturacion.total_facturas
 
@@ -175,3 +175,15 @@ const Consultas = async (parm) => {
         columnClass: 'medium',
     });
  */
+
+document.addEventListener('DOMContentLoaded', function () {
+    const superpuesto = document.getElementById('superpuesto');
+
+    // Espera 3 segundos y luego desvanece el div
+    setTimeout(() => {
+        superpuesto.style.opacity = 0;
+        setTimeout(() => {
+            superpuesto.classList.add("d-none")
+        }, 500);
+    }, 1000);
+});

@@ -13,8 +13,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="icon" href="/imagen/favicon.png" sizes="any" />
   <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate">
-  <meta name="viewport"
-    content="width=device-width, initial-scale=1.0, user-scalable=no, maximun-scalable=1.0, maximun-scalable=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>Speed</title>
   <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,7 +29,7 @@
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
   <link rel="stylesheet" type="text/css"
     href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
- 
+
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 
@@ -42,13 +42,24 @@
 </head>
 
 <body><!--Inicio proyecto-->
+  <div class=" bg-light" id="superpuesto">
+    <div class="loader">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+        <path
+          d="M64 32C28.7 32 0 60.7 0 96v64c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm280 72a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm48 24a24 24 0 1 1 48 0 24 24 0 1 1 -48 0zM64 288c-35.3 0-64 28.7-64 64v64c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V352c0-35.3-28.7-64-64-64H64zm280 72a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm56 24a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z">
+        </path>
+      </svg>
+      <span></span>
+    </div>
+  </div>
+
   <div class=" d-flex  align-items-center justify-content-end bg-speed w-100 " style="height: 60px;">
     <li class="nav-item d-block float-end d-flex justify-content-end ">
       <div class="d-flex justify-content-center">
         <div class="col-1"><a class="nav-link" href="https://www.facebook.com/speed.ecuador" target="_blank"><img
               loading="lazy" src="imagen/INTERNET-SPEED_ FACEBOOK-02.png" style="height: 25px" alt=""></a></div>
         <div class="col-1"><a class="nav-link" href="#" target="_blank"><img src="imagen/INTERNET-SPEED_TIKTOK-02.png"
-              style="height: 25px" alt=""></a></div>
+              style="height: 25px" alt="" loading="lazy"></a></div>
         <div class="col-1 "><a class="nav-link" href="https://www.instagram.com/speed.ecuador" target="_blank"><img
               loading="lazy" src="imagen/INTERNET-SPEED_INSTAGRAM-02.png" style="height: 25px" alt=""></a></div>
         <div class="col-1"><a class="nav-link"
@@ -81,7 +92,7 @@
             <a class="nav-link active text-secondary " aria-current="page" href="">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-secondary" href="#">Quiénes somos</a>
+            <a class="nav-link text-secondary" href="#info">Quiénes somos</a>
           </li>
           <li class="nav-item">
             <a class="nav-link text-secondary " href="#planes">Planes</a>
@@ -141,7 +152,7 @@
           <div class="col-12 col-md-3 btn-group-vertical text-center" style="position: relative;">
             <div class="m-auto " style="line-height: 0.1em; ">
               <img src="imagen/INTERNET-SPEED_ PLAN PRO_Mesa de trabajo 1 copia.png" class=" img-fluid text-center"
-                alt="">
+                alt="" loading="lazy">
             </div>
           </div>
         </div>
@@ -300,8 +311,9 @@
                   class=" img-fluid " style="height:75px; width: 200px;" loading="lazy">
               </div>
               <div class="px-3">
-                <button class="btn bg-white fw-bold "
-                  style="height: 50px; width:190px;font-family: 'Asap', sans-serif; ">Descarga App</button>
+                <a class="btn bg-white fw-bold " style="height: 50px; width:190px;font-family: 'Asap', sans-serif; "
+                  href="https://play.google.com/store/apps/details?id=www.speedv1.com.ec" target="_blank">Descarga
+                  App</a>
               </div>
             </div>
           </div>
@@ -330,8 +342,8 @@
                   class=" img-fluid " style="height:75px; width: 200px;" loading="lazy">
               </div>
               <div class="px-3">
-                <button class="btn bg-white fw-bold border "
-                  style="height: 50px; width:190px;font-family: 'Asap', sans-serif; ">Descarga App</button>
+                <a class="btn bg-white fw-bold border "
+                  style="height: 50px; width:190px;font-family: 'Asap', sans-serif; "  href="https://play.google.com/store/apps/details?id=www.speedv1.com.ec" target="_blank">Descarga App</a>
               </div>
             </div>
           </div>
@@ -410,7 +422,7 @@
             <button class="btn text-white px-5 " style="background-color: #1a245B;font-family: 'Asap', sans-serif;">
               Referir </button>
           </div>
-          <img style="height: 60px;" alt="">
+          <img style="height: 60px;" alt="" loading="lazy">
         </div>
         <div style="height: 100% !important; width: 100%;" class="">
           <img style="height: 250px;" class=" img-fluid  "
@@ -458,7 +470,7 @@
 
   </div>
   <!--footer -->
-  <footer class=" container-fluid py-2  text-white "
+  <footer class=" container-fluid py-2  text-white " id="info"
     style="position: absolute; background-color: #1a245B;font-family: asap-regular;"> <!-- FOOTER-->
     <div class="row px-2">
       <div class=" col-md-3 px-3">
@@ -507,7 +519,7 @@
           <span class="font-weight-bold">Área de Clientes</span>
           <li class="my-2"><a class="text-white text-decoration-none" style="cursor:pointer" data-toggle="modal"
               data-target="#puntosDePago">Puntos de pago</a></li>
-          <li class="my-2"><a class="text-white text-decoration-none" href="https://www.speedtest.net/"
+          <li class="my-2"><a class="text-white text-decoration-none" href="https://speedecuador.speedtestcustom.com"
               target="_blank">Test
               de velocidad</a></li>
           <li class="my-2"><a class="text-white text-decoration-none" href="https://portal.comnet.ec/cliente/login"
@@ -687,7 +699,7 @@
                 IDEAL</h2>
               <span class=" fw-bold" style=" font-family: 'Asap',sans-serif; color: #ffffff;">PARA TU </span>
               <h2 class=" fw-bold" style="font-size: 2em; font-family: 'Asap', sans-serif; color: #dbe131;">HOGAR</h2>
-              <img class="img-fluid" style="height:100px;" src="imagen/CASACOM.png" />
+              <img class="img-fluid" style="height:100px;" src="imagen/CASACOM.png" loading="lazy" />
               <div class="text-center">
                 <h1 style="font-family: 'Asap', sans-serif; color: #1a245B;" id="total"></h1>
               </div>
@@ -721,7 +733,7 @@
         <div class="container-fluid px-0">
           <div class=" row px-0 pb-2">
             <div class="col-12 col-lg-6">
-              <img class="img-fluid px-5" src="/imagen/INTERNET_marca speed a color-02.png" />
+              <img class="img-fluid px-5" src="/imagen/INTERNET_marca speed a color-02.png" loading="lazy" />
             </div>
             <div class="col-12 col-lg-6 text-center d-flex justify-content-center align-items-center">
 
@@ -741,7 +753,7 @@
             <div class="col-10 col-lg-8">
               <div id="hogarpiso" class="d-flex  justify-content-around ">
                 <div id="pequeña" class="hijo col-4 border rounded-2 text-center shadow p-2">
-                  <img class="img-fluid" src="imagen/casapequena.png" />
+                  <img class="img-fluid" src="imagen/casapequena.png" loading="lazy" />
                   <div class="pb-2" style="line-height: 0.5;">
                     <h2 class=" fw-bold" style="font-size: 1em; font-family: 'Asap', sans-serif; color: #1a245B;">
                       PEQUEÑA</h2>
@@ -749,7 +761,7 @@
                   </div>
                 </div>
                 <div id="mediana" class="hijo col-4 border rounded-3 text-center mx-4 shadow p-2">
-                  <img src="imagen/casamediana.png" class="img-fluid" alt="">
+                  <img src="imagen/casamediana.png" class="img-fluid" alt="" loading="lazy">
                   <div class="pb-2" style="line-height: 0.5;">
 
 
@@ -759,7 +771,7 @@
                   </div>
                 </div>
                 <div id="grande" class="hijo col-4 border rounded-2 text-center shadow p-2">
-                  <img src="imagen/casagrande.png" class="img-fluid" alt="">
+                  <img src="imagen/casagrande.png" class="img-fluid" alt="" loading="lazy">
                   <div class="pb-2" style="line-height: 0.5;">
 
 
@@ -813,21 +825,21 @@
             <div class="col-10 col-lg-8">
               <div id="pisoscontenedor" class="d-flex  justify-content-around ">
                 <div id="uno" class="hijo col-3 border rounded-2 text-center shadow p-2">
-                  <img class="img-fluid" src="imagen/wifiicon.png" />
+                  <img class="img-fluid" src="imagen/wifiicon.png" loading="lazy" />
                   <div class="pb-2">
 
                     <span class="fw-bold" style="font-size: 0.8em;">1 piso</span>
                   </div>
                 </div>
                 <div id="dos" class="hijo col-3 border rounded-3 text-center mx-2 shadow p-2">
-                  <img src="imagen/wifiicon.png" class="img-fluid" alt="">
+                  <img src="imagen/wifiicon.png" class="img-fluid" alt="" loading="lazy">
                   <div class="pb-2">
 
                     <span class="fw-bold" style="font-size: 0.8em;">2 pisos</span>
                   </div>
                 </div>
                 <div id="tres" class="hijo col-3 border rounded-2 text-center shadow  mx-2 p-2">
-                  <img src="imagen/wifiicon.png" class="img-fluid" alt="">
+                  <img src="imagen/wifiicon.png" class="img-fluid" alt="" loading="lazy">
                   <div class="pb-2">
 
                     <span class="fw-bold" style="font-size: 0.8em;">3 pisos</span>
@@ -864,7 +876,7 @@
         <div class="container-fluid px-0">
           <div class=" row px-0 pb-2">
             <div class="col-12 col-lg-6">
-              <img class="img-fluid px-5" src="/imagen/INTERNET_marca speed a color-02.png" />
+              <img class="img-fluid px-5" src="/imagen/INTERNET_marca%20speed%20a%20color-02.png" loading="lazy" />
             </div>
             <div class="col-12 col-lg-6 text-center d-flex justify-content-center align-items-center">
 
@@ -1104,8 +1116,9 @@
               <button onclick="rediret() " class=" rounded-pill bg-speed px-4 text-light"> CONTRATAR</button>
             </div>
             <div class="px-2">
-              <button id="registrapago" href="https://api.whatsapp.com/send?phone=593980850287&amp;text=Vi%20su%20pagina%20web,%20quiero%20contratar%20sus%20servicios%20para%20mi%20domicilio"
-            target="_blank" class=" rounded-pill bg-speed px-4 text-light">LLAMAR</button>
+              <button id="registrapago"
+                href="https://api.whatsapp.com/send?phone=593980850287&amp;text=Vi%20su%20pagina%20web,%20quiero%20contratar%20sus%20servicios%20para%20mi%20domicilio"
+                target="_blank" class=" rounded-pill bg-speed px-4 text-light">LLAMAR</button>
             </div>
           </div>
         </div>
