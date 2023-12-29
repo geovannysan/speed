@@ -1,3 +1,17 @@
+const imagenes = document.querySelectorAll('img')
+var idcliente
+var facturas
+function lazyLoad() {
+    for (const imagen of imagenes) {
+
+        if (imagen.getAttribute('data-src')) {
+            imagen.src = imagen.getAttribute('data-src')
+            console.log(imagen.getAttribute('data-src'))
+            imagen.removeAttribute('data-src')
+        }
+    }
+}
+window.addEventListener('scroll', lazyLoad)
 const swiper = new Swiper('.swiper-container', {
     direction: 'horizontal',
     loop: true,
@@ -83,6 +97,7 @@ let cerrar = document.getElementById("close")
 var myModal = new bootstrap.Modal(document.getElementById('exampleModal'));
 var modalConsulta = new bootstrap.Modal(document.getElementById('calculosModal'))
 var modalcalular = new bootstrap.Modal(document.getElementById('calculosModal'))
+var link_pagosme = new bootstrap.Modal(document.getElementById('modallink_pago'))
 var cerrarpregunta = document.querySelector(".pregunta")
 
 const imgElement = document.getElementById('imagenplan');
@@ -119,6 +134,7 @@ function rediret() {
     //localStorage.setItem("PLANES", "")
     window.location.href = "contratar.html"
 }
+var cedula, nombre, correo, movil, direccion_principal
 boton.addEventListener('click', function (e) {
     console.log(cedual.value)
 
@@ -132,14 +148,26 @@ boton.addEventListener('click', function (e) {
     Consultas(cedual.value).then(oupt => {
         if (oupt.estado == "exito") {
             let datos = oupt.datos[0]
-
-
+            idcliente = oupt.datos[0].id
+            cedula = datos.cedula
+            nombre = datos.nombre
+            correo = datos.correo
+            movil = datos.movil
+            direccion_principal = datos.direccion_principal
             myModal.show();
             document.querySelector('.modal').classList.add('zoom');
             nombr.innerHTML = datos.nombre
-            direcion.innerHTML = ""// datos.direccion_principal
+            direcion.innerHTML = ""//datos.direccion_principal
             cantidad.innerHTML = "Total de Facturas impagas: " + datos.facturacion.facturas_nopagadas
             valor.textContent = datos.facturacion.total_facturas
+            if (parseInt(datos.facturacion.facturas_nopagadas) == 0) {
+                document.getElementById("Pagar").classList.add("d-none")
+                document.getElementById("cerrar").classList.remove("d-none")
+            } else {
+                document.getElementById("cerrar").classList.add("d-none")
+                document.getElementById("Pagar").classList.remove("d-none")
+            }
+
 
         }
         console.log(oupt)
@@ -187,3 +215,91 @@ document.addEventListener('DOMContentLoaded', function () {
         }, 500);
     }, 1000);
 });
+
+const ConsultaFactura = async () => {
+    let detalle
+    try {
+        let { data } = await axios.get("https://api.t-ickets.com/mikroti/PortalApi/GetInvoices/" + idcliente + "/appspeed")
+        if (data.estado == "exito") {
+            detalle = await axios.get("https://api.t-ickets.com/mikroti/PortalApi/GetInvoice/" + data.facturas[0].id + "/appspeed")
+            if (detalle.data.estado == "exito") {
+                data.facturas[0].detalle = detalle.data.items[0].descrp
+            } else {
+                data.facturas[0].detalle = ""
+            }
+        } return data
+    } catch (error) {
+        return error
+    }
+}
+
+/**
+ * 
+ * 
+ * 
+ * 
+ */
+//https://api.t-ickets.com/mikroti/MovilApi/linkpago
+/*
+{
+        "document": "{{clientecomnet.cedula}}", // cedula 
+        "name": "{{clientecomnet.nombre}}", // nombre del cliente 
+        "email": "{{clientecomnet.correo}}", //correo del cliente
+        "phones": "{{clientecomnet.movil}}", // movil del cliente
+        "address": "{{clientecomnet.direccion_principal}}", // direcion del cliente
+        "description": "{{descripotio}}", // description de la factura 
+        "amount": "{{pagarcomisioan}}", //total a pagar
+        "porcentaje": "{{1.08}}", //porcentaje generado
+        "idfactura": "{{factura.id}}",//idfactura
+        "idecliente": "{{clientecomnet.id}}", // id cliente
+        "subtotal": "{{factura.total}}" //total de la factura 
+      }
+*/
+
+function Generar_link_Pago() {
+    ConsultaFactura().then(ouput => {
+        console.log(ouput)
+        if (ouput.estado == "exito") {
+            facturas = ouput.facturas[0]
+            link_pagosme.show()
+            let params = {
+                "document": cedula,
+                "name": nombre, // nombre del cliente 
+                "email": correo, //correo del cliente
+                "phones": movil, // movil del cliente
+                "address": direccion_principal, // direcion del cliente
+                "description": facturas.detalle, // description de la factura 
+                "amount": parseFloat(facturas.total) * 1.08, //total a pagar
+                "porcentaje": 1.08, //porcentaje generado
+                "idfactura": facturas.id,//idfactura
+                "idecliente": idcliente, // id cliente
+                "subtotal": facturas.total //total de la factura 
+            }
+            Link_pago(params).then(oputs => {
+                console.log(oputs)
+                if (oputs.success) {
+                    $.alert("hubo un error")
+
+
+                    window.open(oputs.url, "_blank")
+                }
+            }).catch(err => {
+                console.log(err)
+            })
+
+        }
+    }).catch(err => {
+        console.log(err)
+    })
+
+    const Link_pago = async (parms) => {
+        try {
+            let { data } = await axios.post("https://api.t-ickets.com/mikroti/MovilApi/linkpago", parms)
+            return data
+        } catch (error) {
+            return error
+        }
+    }
+
+
+}

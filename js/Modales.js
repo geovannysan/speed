@@ -17,7 +17,7 @@ let dispositivosModal = new bootstrap.Modal(document.getElementById('dispositivo
 let dispositivocontenedor = document.getElementById('dispositivocontenedor')
 var modalcalular = new bootstrap.Modal(document.getElementById('calculosModal'))
 let estimadoModal = new bootstrap.Modal(document.getElementById('estimadoModal'))
-let puntosdePagos = new bootstrap.Modal(document.getElementById('puntosDePago'))
+let puntopago = new bootstrap.Modal(document.getElementById('puntodePago'))
 //estimadoModal.show()
 let megas = 0
 
@@ -34,9 +34,10 @@ let cantidadclick = {
     "ocho": 85,
     "dies": 108
 }
-function abrirPuntos() {
-    puntosdePagos.toggle()
+function Abrir_Puntos_Pago() {
+    puntopago.toggle()
 }
+
 calcularplan.addEventListener("click", function () {
     seleccioncasa.show()
     modalcalular.hide()
