@@ -1,6 +1,7 @@
 const imagenes = document.querySelectorAll('img')
 var idcliente
 var facturas
+const superpuesto = document.getElementById('superpuesto');
 function lazyLoad() {
     for (const imagen of imagenes) {
 
@@ -105,6 +106,7 @@ const imgElement = document.getElementById('imagenplan');
 document.querySelector('.modal').classList.add('zoom');
 cerr.addEventListener("click", function () { myModal.hide(); })
 calcular.addEventListener("click", function () {
+    console.log("cliekc")
     const imgElement = document.getElementById('planesimagen');
     imgElement.src = '/imagen/PLANES WEB-05.png';
     modalConsulta.hide();
@@ -205,7 +207,7 @@ const Consultas = async (parm) => {
  */
 
 document.addEventListener('DOMContentLoaded', function () {
-    const superpuesto = document.getElementById('superpuesto');
+
 
     // Espera 3 segundos y luego desvanece el div
     setTimeout(() => {
@@ -257,40 +259,91 @@ const ConsultaFactura = async () => {
 */
 
 function Generar_link_Pago() {
-    ConsultaFactura().then(ouput => {
-        console.log(ouput)
-        if (ouput.estado == "exito") {
-            facturas = ouput.facturas[0]
-            link_pagosme.show()
-            let params = {
-                "document": cedula,
-                "name": nombre, // nombre del cliente 
-                "email": correo, //correo del cliente
-                "phones": movil, // movil del cliente
-                "address": direccion_principal, // direcion del cliente
-                "description": facturas.detalle, // description de la factura 
-                "amount": parseFloat(facturas.total) * 1.08, //total a pagar
-                "porcentaje": 1.08, //porcentaje generado
-                "idfactura": facturas.id,//idfactura
-                "idecliente": idcliente, // id cliente
-                "subtotal": facturas.total //total de la factura 
-            }
-            Link_pago(params).then(oputs => {
-                console.log(oputs)
-                if (oputs.success) {
-                    $.alert("hubo un error")
+    $.confirm({
+        theme: 'supervan',
+        title: 'Confirmar',
+        content: 'Al Genara link de pagos se generan recargos por pagos de tarjeta',
+        type: 'red',
+        buttons: {
+            tryAgain: {
+                text: 'Generar',
+                btnClass: 'btn-red',
+                action: function () {
+                    superpuesto.style.opacity = 1;
+                    superpuesto.classList.remove("d-none")
+                    ConsultaFactura().then(ouput => {
+                        console.log(ouput)
+                        if (ouput.estado == "exito") {
+                            facturas = ouput.facturas[0]
+                            //
+                            let params = {
+                                "document": cedula,
+                                "name": nombre, // nombre del cliente 
+                                "email": correo, //correo del cliente
+                                "phones": movil, // movil del cliente
+                                "address": direccion_principal, // direcion del cliente
+                                "description": facturas.detalle, // description de la factura 
+                                "amount": parseFloat(facturas.total) * 1.08, //total a pagar
+                                "porcentaje": 1.08, //porcentaje generado
+                                "idfactura": facturas.id,//idfactura
+                                "idecliente": idcliente, // id cliente
+                                "subtotal": facturas.total //total de la factura 
+                            }
+                            console.log(params)
+                            if (Object.values(params).some(e => e == "")) {
+                                superpuesto.classList.add("d-none")
+                                $.confirm({
+                                    title: 'Datos',
+                                    content: 'Su perfil no cuenta con todos los datos nesesacios como email o móvil',
+                                    autoClose: 'logoutUser|10000',
+                                    buttons: {
+                                        logoutUser: {
+                                            text: 'Cerrar en ',
+                                        },
+                                        abrirnuevo: {
+                                            text: 'Contactar',
+                                            action: function () {
+                                                window.open("https://api.whatsapp.com/send?phone=593980850287", "_blank")
+                                            }
+                                        }
+                                    }
+                                });
+                                return
+                            }
 
+                            console.log(params)
+                            Link_pago(params).then(oputs => {
+                                console.log(oputs)
+                                if (oputs.success) {
+                                    superpuesto.classList.add("d-none")
+                                    // $.alert("hubo un error")
 
-                    window.open(oputs.url, "_blank")
+                                    link_pagosme.show()
+                                    //window.open(oputs.url, "_blank")
+                                    var ifr = document.getElementById("linkdepago");
+                                    ifr.setAttribute("src", oputs.url);
+                                }
+                            }).catch(err => {
+                                superpuesto.classList.add("d-none")
+                                $.alert("hubo un error")
+                                console.log(err)
+                            })
+
+                        }
+                    }).catch(err => {
+                        superpuesto.classList.add("d-none")
+                        $.alert("hubo un error")
+                        console.log(err)
+                    })
                 }
-            }).catch(err => {
-                console.log(err)
-            })
-
+            },
+            
+            close:{
+                text:"Cancelar"
+            }
         }
-    }).catch(err => {
-        console.log(err)
-    })
+    });
+
 
     const Link_pago = async (parms) => {
         try {

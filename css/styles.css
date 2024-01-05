@@ -42,6 +42,7 @@
 
 .bg-pagos {
     background: url('/imgepagos/bgpuntos.png');
+    width: 100% !important;
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;

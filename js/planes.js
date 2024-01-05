@@ -4,6 +4,7 @@ let computer = document.getElementById("computer");
 let verficaplan = document.getElementById("calcular")
 const imgElement = document.getElementById('planesimagen');
 verficaplan.addEventListener("click", function () {
+    console.log("clieck")
     var tv = 25 * parseInt(televi.value==""?0:televi.value)
     var ph = 8 * parseInt(phone.value==""?0:phone.value)
     var pc = 15 * parseInt(computer.value==""?0:computer.value)

@@ -1,3 +1,4 @@
+<!DOCTYPE >
 <html lang="es">
 
 <head>
@@ -761,9 +762,9 @@
                     Pagar <i class=" fa icon-credit-card"></i></button>
                 </div>
                 <div class="px-3">
-                  <button class="close btn text-white shadow " id="close"
+                  <a class="close btn text-white shadow " id="close"
                     style="font-family: 'Asap', sans-serif; background-color: #1a245B;" data-dismiss="modal"
-                    onclick="Abrir_Puntos_Pago()">Punto de pago <i class=" icon icon-location"></i></button>
+                   href="/pagos.html" >Punto de pago <i class=" icon icon-location"></i></a>
                 </div>
 
               </div>
@@ -1323,8 +1324,8 @@
   <div class="modal fade" id="modallink_pago" tabindex="-1" aria-labelledby="modallink_pago" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
       <div class="modal-content">
-        <div class="container-fluid px-0">
-          <iframe id="linkdepago"></iframe>
+        <div class="container-fluid vh-100 px-0">
+          <iframe id="linkdepago" width="100%" height="100%"></iframe>
         </div>
 
       </div>
