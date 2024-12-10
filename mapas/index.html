@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa con Marcadores</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <style>
+        #map {
+            height: calc(80vh - 50px);
+            /* Altura del mapa - altura del selector flotante */
+        }
+
+        .selector-flotante {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 5px;
+            z-index: 1000;
+        }
+        .leaflet-control-layers-overlays,.leaflet-control{
+            display: none !important;
+        }
+    </style>
+</head>
+<link rel="stylesheet" href="../css/bootstrap.css">
+
+<body>
+    <div class="selector-flotante">
+        <label for="ubicacion">Ubicación:</label>
+        <select id="ubicacion">
+            <option value=""></option>
+        </select>
+    </div>
+    <div class=" container">
+        
+    </div>
+    <br>
+    
+    <div class="row">
+        <div class="col-6">
+            <div id="map"></div>
+        </div>
+        <div class="col-6">
+
+        </div>
+    </div>
+    
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
