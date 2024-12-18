@@ -301,7 +301,43 @@
     </div>
   </nav>
   <!--Header-->
-  <div class="container-fluid px-0">
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="../imagen/carrusel/plam100mg.png" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="../imagen/carrusel/plam160mg.png" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="../imagen/carrusel/PLANADVANCE.png" class="d-block w-100" alt="...">
+      </div>
+     
+          <div class="carousel-item">
+            <img src="../imagen/carrusel/planpro.png" class="d-block w-100" alt="...">
+          </div>
+      <div class="carousel-item">
+        <img src="../imagen/carrusel/plam700mg.png" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="../imagen/carrusel/planspeed.png" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="../imagen/carrusel/bannerweb.png" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+    
+  </div>
+  <div class="container-fluid d-none px-0">
     <div class="container-fluid  d-none d-sm-none d-md-block"
       style="background: url('../imagen/INTERNET-SPEED-FONDO.png');background-size: cover;background-repeat: no-repeat;  background-position:  center;height: 700px;">
       <div class="col-12 h-100  justify-content-end align-items-end">
@@ -374,43 +410,51 @@
     </div>
     <div class="slick-carousel container ">
       <div class="d-flex justify-content-center align-items-center" style="position: relative;">
-        <img class="  planes" data-src="" src="imagen/PLANES WEB-05.png" style="height: 350px;" alt="Plan 80 megas"
+        <img class="  planes" data-src="" src="imagen/planes/PLANLIGHT.png" style="height: 350px;" alt="Plan 80 megas"
           loading="lazy" />
-        <button onclick="MostarPlan('PLAN-HOME','PLANES WEB-05')" class="btn-s btn-naranja text-white px-4 py-1"
+        <button onclick="MostarPlan('PLAN-HOME','PLANES WEB-05')" class="btn-s d-none text-white px-4 py-1"
           style="position: absolute; bottom: 10px; font-size: 15px; font-family: asap-regular;"><i
             class="icon-cart"></i> Contratar</button>
       </div>
       <div class="d-flex justify-content-center align-items-center" style="position: relative;"><img
-          alt="Plan 130 megas" class="  planes" data-src="" src="imagen/PLANES WEB-04.png" style="height: 350px;"
+          alt="Plan 130 megas" class="  planes" data-src="" src="imagen/planes/PLANHOME.png" style="height: 350px;"
           loading="lazy" />
-        <button onclick="MostarPlan('PLAN-SILVER','PLANES WEB-04')" class="btn-s btn-naranja text-white px-4 py-1"
+        <button onclick="MostarPlan('PLAN-SILVER','PLANES WEB-04')" class="btn-s d-none btn-naranja text-white px-4 py-1"
           style="position: absolute; bottom: 10px; font-size: 15px; font-family: asap-regular;"><i
             class="icon-cart"></i>
           Contratar</button>
       </div>
       <div class="d-flex justify-content-center align-items-center" style="position: relative;">
-        <img class=" planes" data-src="" src="imagen/PLANES WEB-03.png" style="height: 350px;" loading="lazy"
+        <img class=" planes" data-src="" src="imagen/planes/PLANsilver.png" style="height: 350px;" loading="lazy"
           alt="Plan 170 megas" />
-        <button onclick="MostarPlan('PLAN-ADVANCE','PLANES WEB-03')" class="btn-s btn-naranja text-white px-4 py-1"
+        <button onclick="MostarPlan('PLAN-ADVANCE','PLANES WEB-03')" class="btn-s d-none btn-naranja text-white px-4 py-1"
           style="position: absolute; bottom: 10px; font-size: 15px; font-family: asap-regular;"><i
             class="icon-cart"></i>
+          Contratar</button>
+      </div>
+      <div class="d-flex justify-content-center align-items-center" style="position: relative;">
+        <img class=" planes" data-src="" src="imagen/planes/PLANadvance (1).png" style="height: 350px;" alt="Plan 350 megas"
+          loading="lazy" />
+        <button onclick="MostarPlan('PLAN-SPEED','PLANES WEB_Mesa de trabajo 1')"
+          class=" btn-s d-none btn-naranja text-white px-4 py-1"
+          style="position: absolute; bottom: 10px; font-size: 15px; font-family: asap-regular;"><i class="icon-cart"></i>
           Contratar</button>
       </div>
       <div class="d-flex justify-content-center align-items-center" style="position: relative;"><img
-          alt="Plan 220 megas" class=" planes" data-src="" src="imagen/PLANES WEB-02.png" style="height: 350px;"
+          alt="Plan 220 megas" class=" planes" data-src="" src="imagen/planes/PLANPRO.png" style="height: 350px;"
           loading="lazy" />
-        <button onclick="MostarPlan('PLAN-PRO','PLANES WEB-02')" class="btn-s btn-naranja text-white px-4 py-1"
+        <button onclick="MostarPlan('PLAN-PRO','PLANES WEB-02')" class="btn-s d-none btn-naranja text-white px-4 py-1"
           style="position: absolute; bottom: 10px; font-size: 15px; font-family: asap-regular;"><i
             class="icon-cart"></i>
           Contratar</button>
       </div>
+      
       <div class="d-flex justify-content-center align-items-center" style="position: relative;">
-        <img class=" planes" data-src="" src="imagen/PLANES WEB_Mesa de trabajo 1.png" style="height: 350px;"
-          alt="Plan 350 megas" loading="lazy" />
+        <img class=" planes" data-src="" src="imagen/planes/PLANSPEED.png" style="height: 350px;" alt="Plan 350 megas"
+          loading="lazy" />
         <button onclick="MostarPlan('PLAN-SPEED','PLANES WEB_Mesa de trabajo 1')"
-          class=" btn-s btn-naranja text-white px-4 py-1"
-          style="position: absolute; bottom: 10px; font-size: 15px; font-family: asap-regular;"><i
-            class="icon-cart"></i>
+          class=" btn-s d-none btn-naranja text-white px-4 py-1"
+          style="position: absolute; bottom: 10px; font-size: 15px; font-family: asap-regular;"><i class="icon-cart"></i>
           Contratar</button>
       </div>
     </div>

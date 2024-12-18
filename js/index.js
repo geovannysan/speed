@@ -9,6 +9,7 @@ const datos = async(parm)=>{
         
     }    
 }
+$('.carousel').carousel()
 async function nuevos(e) {
     e.preventDefault()
     datos(document.getElementById("inputPassword2").value).then(ou => {
