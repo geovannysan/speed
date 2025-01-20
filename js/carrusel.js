@@ -127,7 +127,7 @@ cerrarpregunta.addEventListener("click", function () {
 function MostarPlan(e, J) {
     modalConsulta.show();
     localStorage.setItem("PLANES", e)
-    imgElement.src = "imagen/" + J + ".jpeg";
+    imgElement.src = "" + J ;
 }
 document.querySelector('.btn-close').addEventListener('click', () => {
     modalConsulta.hide()

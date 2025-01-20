@@ -85,67 +85,66 @@ registrapago.addEventListener('click', () => {
     if (megas < 120) {
         elemento.style.backgroundColor = "#2596be";
         elemento.textContent = "Plan Home"
-        // imagen.src = "/imagen/SPEED_INTERNETHOME.png"
-        localStorage.setItem("PLANES", "PLAN-HOME")
+        imagen.src = "/imagen/carrusel/plam160mg.jpg"
+        localStorage.setItem("PLANES", "plam160mg")
     }
     if (megas >= 120 && megas <= 150) {
         elemento.style.backgroundColor = "#54ab34";
         elemento.textContent = "Plan Silver"
-        // imagen.src = "/imagen/SPEED_INTERNETSILVER.png"
-        localStorage.setItem("PLANES", "PLAN-SILVER")
+        imagen.src = "/imagen/carrusel/plansilver.jpg"
+        localStorage.setItem("PLANES", "carrusel/plansilver")
     }
     if (megas >= 180 && megas < 200) {
         elemento.style.backgroundColor = "#7c14ab";
         elemento.textContent = "Plan Advance"
-        imagen.src = "/imagen/SPEED_INTERNETADVAN.png"
-        localStorage.setItem("PLANES", "PLAN-ADVANCE")
+        imagen.src = "/imagen/carrusel/PLANADVANCE.jpg"
+        localStorage.setItem("PLANES", "carrusel/PLANADVANCE")
     }
     if (megas >= 200 && megas < 220) {
         elemento.style.backgroundColor = "#5db7af";
         elemento.textContent = "Plan Pro"
-        // imagen.src = "/imagen/SPEED_INTERNETPRO.png"
-        localStorage.setItem("PLANES", "PLAN-PRO")
+        imagen.src = "/imagen/carrusel/planpro.jpg"
+        localStorage.setItem("PLANES", "carrusel/planpro")
     }
     if (megas >= 220) {
         elemento.style.backgroundColor = "#fb5b24";
         elemento.textContent = "Plan Speed"
-        // imagen.src = "/imagen/SPEED_INTERNETSPEED.png"
-        localStorage.setItem("PLANES", "PLAN-SPEED")
+        imagen.src = "/imagen/carrusel/plam700mg.jpg"
+        localStorage.setItem("PLANES", "carrusel/plam700mg")
     }
 })
 continuarestimado.addEventListener("click", function () {
     const elemento = document.getElementById("plansuge");
     const imagen = document.getElementById("imgsuge")
     if (megas < 120) {
-        localStorage.setItem("PLANES", "PLAN-HOME")
         elemento.style.backgroundColor = "#2596be";
         elemento.textContent = "Plan Home"
-        imagen.src = "/imagen/SPEED_INTERNETHOME.png"
-
+        imagen.src = "/imagen/carrusel/plam160mg.jpg"
+        localStorage.setItem("PLANES", "plam160mg")
     }
-    if (megas >= 120 && megas <= 150) {
-        localStorage.setItem("PLANES", "PLAN-SILVER")
+    if (megas >= 120 && megas < 180) {
         elemento.style.backgroundColor = "#54ab34";
         elemento.textContent = "Plan Silver"
-        imagen.src = "/imagen/SPEED_INTERNETSILVER.png"
+        imagen.src = "/imagen/carrusel/plansilver.jpg"
+        localStorage.setItem("PLANES", "carrusel/plansilver")
     }
     if (megas >= 180 && megas < 200) {
-        localStorage.setItem("PLANES", "PLAN-ADVANCE")
         elemento.style.backgroundColor = "#7c14ab";
         elemento.textContent = "Plan Advance"
-        imagen.src = "/imagen/SPEED_INTERNETADVAN.png"
+        imagen.src = "/imagen/carrusel/PLANADVANCE.jpg"
+        localStorage.setItem("PLANES", "carrusel/PLANADVANCE")
     }
     if (megas >= 200 && megas < 220) {
-        localStorage.setItem("PLANES", "PLAN-PRO")
-        elemento.style.backgroundColor = "#7c14ab";
+        elemento.style.backgroundColor = "#5db7af";
         elemento.textContent = "Plan Pro"
-        imagen.src = "/imagen/SPEED_INTERNETPRO.png"
+        imagen.src = "/imagen/carrusel/planpro.jpg"
+        localStorage.setItem("PLANES", "carrusel/planpro")
     }
     if (megas >= 220) {
-        localStorage.setItem("PLANES", "PLAN-SPEED")
         elemento.style.backgroundColor = "#fb5b24";
         elemento.textContent = "Plan Speed"
-        imagen.src = "/imagen/SPEED_INTERNETSPEED.png"
+        imagen.src = "/imagen/carrusel/plam700mg.jpg"
+        localStorage.setItem("PLANES", "carrusel/plam700mg")
     }
     dispositivosModal.hide()
     estimadoModal.show()
