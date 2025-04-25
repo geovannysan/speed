@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Reserva Cumpleaños - Discoteca La Mona</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 8px;
+        }
+    </style>
+    <script src="
+https://cdn.jsdelivr.net/npm/air-datepicker@3.5.3/air-datepicker.min.js
+"></script>
+    <link href="
+https://cdn.jsdelivr.net/npm/air-datepicker@3.5.3/air-datepicker.min.css
+" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.8/inputmask.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="">
+    <div class="max-w-2xl mx-auto p-6 bg-white shadow-xl rounded-2xl mt-10">
+        <h1 class="text-2xl font-bold text-center mb-6 text-purple-700">🎉 Reserva de Cumpleaños - Discoteca La Mona 🎉
+        </h1>
+        <form class="bg-white  rounded px-8 pt-6 pb-8 mb-4">
+
+
+
+            <div>
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="cumpeanero">Nombre completo del
+                    cumpleañero:</label>
+                <input type="text" id="cumpeanero"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outliner" />
+
+            </div>
+            <div class="grid grid-flow-col grid-rows gap-4">
+                <div class="row-span-3 ">
+                    <label class="block text-gray-700 text-sm font-bold mb-2">Fecha del cumpleaños:</label>
+                    <input type="date" id="fecha" class="w-full p-2 border rounded datepicker" />
+                </div>
+
+                <div class="row-span-2  ">
+                    <label class="block text-gray-700 text-sm font-bold mb-2">Edad que cumple:</label>
+                    <input type="number" id="edad" disabled class="w-full p-2 border rounded" />
+                </div>
+            </div>
+
+
+            <div>
+                <label class="block text-gray-700 text-sm font-bold mb-2">Número de invitados estimado:</label>
+                <input type="number" class="w-full p-2 border rounded" />
+            </div>
+
+            <div>
+                <label class="block text-gray-700 text-sm font-bold mb-2">Zona VIP Preferida:</label>
+                <select class="w-full p-2 border rounded">
+                    <option>Mona VIP</option>
+                    <option>Mona Gold</option>
+                    <option>Mona Silver</option>
+                </select>
+            </div>
+
+            <div>
+                <label class="block text-gray-700 text-sm font-bold mb-2">Paquete de cumpleaños seleccionado:</label>
+                <select class="w-full p-2 border rounded">
+                    <option>Paquete Mona VIP</option>
+                    <option>Paquete Mona Gold</option>
+                    <option>Paquete Mona</option>
+                </select>
+            </div>
+
+            
+
+            <div>
+                <label class="block text-gray-700 text-sm font-bold mb-2">¿Desea saludo del DJ?</label>
+                <select class="w-full p-2 border rounded">
+                    <option>Sí</option>
+                    <option>No</option>
+                </select>
+            </div>
+
+            <div>
+                <label class="block text-gray-700 text-sm font-bold mb-2">Requisitos especiales (si aplica):</label>
+                <textarea class="w-full p-2 border rounded" rows="3"></textarea>
+            </div>
+
+            <div  class="grid grid-flow-col  gap-2" >
+                
+            <div class="row-cols-2">
+                <label class="block text-gray-700 text-sm font-bold mb-2">Fecha de reserva:</label>
+                <input id="reserva" type="date" min="" class="w-full p-2 border rounded" />
+            </div>
+            <div class="row-cols-2">
+                <label class="block text-gray-700 text-sm font-bold mb-2">Hora de llegada estimada:</label>
+                <input type="time" min="08:00" max="18:00" class="w-full p-2 border rounded" />
+            </div>
+            </div>
+
+            <div>
+                <label class="block text-gray-700 text-sm font-bold mb-2">Total a pagar:</label>
+                <input type="text" class="w-full p-2 border rounded" />
+            </div>
+
+            <div>
+                <label class="block text-gray-700 text-sm font-bold mb-2">Método de pago:</label>
+                <select class="w-full p-2 border rounded">
+                    <option value="Efectivo">Efectivo</option>
+                    <option  value="Tarjeta">Tarjeta</option>
+                    <option value="Transferencia">Transferencia Bancaria</option>
+                </select>
+            </div>
+
+            <div>
+                <label class="block text-gray-700 text-sm font-bold mb-2">Comentarios adicionales:</label>
+                <textarea class="w-full p-2 border rounded" rows="3"></textarea>
+            </div>
+            <div class="flex items-center justify-center w-full mb-3">
+                <label for="dropzone-file"
+                    class="flex flex-col items-center justify-center w-full h-34 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-gray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
+                    <div class="flex flex-col items-center justify-center pt-5 pb-6">
+                        <svg class="w-8 h-8 mb-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2" />
+                        </svg>
+                        <p class="mb-2 text-sm text-gray-500 dark:text-gray-400">
+                            <span class="font-semibold">Click to upload</span>
+                            su lista de invitados</p>
+                        <p class="text-xs text-gray-500 dark:text-gray-400">doc, txt, excel </p>
+                    </div>
+                    <input id="dropzone-file" type="file" class="hidden" />
+                </label>
+            </div>
+
+
+            <div class="text-sm text-gray-600 bg-gray-50 p-3 rounded">
+                <p><strong>Términos y Condiciones:</strong> La reserva es válida una vez realizada la confirmación y
+                    pago del paquete. El acceso a las zonas VIP está sujeto a disponibilidad. La discoteca no se hace
+                    responsable por cambios de último minuto.</p>
+            </div>
+            
+
+            <button type="submit" class="w-full bg-purple-700 text-white py-2 rounded hover:bg-purple-800 transition">
+                Enviar Reserva
+            </button>
+
+        </form>
+    </div>
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const inputFecha = document.getElementById('fecha');
+
+        const hoy = new Date();
+        const yyyy = hoy.getFullYear();
+        const mm = String(hoy.getMonth() + 1).padStart(2, '0');
+        const dd = String(hoy.getDate()).padStart(2, '0');
+
+        const fechaHoy = `${yyyy}-${mm}-${dd}`;
+      //  inputFecha.min = fechaHoy;
+        const localeEs = {
+            days: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
+            daysShort: ['Dom', 'Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb'],
+            daysMin: ['Do', 'Lu', 'Ma', 'Mi', 'Ju', 'Vi', 'Sa'],
+            months: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio',
+                'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+            monthsShort: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun',
+                'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
+            today: 'Hoy',
+            clear: 'Limpiar',
+            dateFormat: 'yyyy-MM-dd',
+            firstDay: 1
+        };
+        /*
+                new AirDatepicker('#fecha', {
+                    locale: localeEs,
+                    autoClose: true,
+                    startDate: new Date(1990, 0, 1),// Año, mes (0 = enero), día,
+                    onSelect({ date, formattedDate, datepicker }) {
+                        console.log('Fecha seleccionada como objeto Date:', date);
+                        console.log(formattedDate);
+                        var birthday_date = new Date(formattedDate);
+                        var ageDifMs = Date.now() - birthday_date.getTime();
+                        var ageDate = new Date(ageDifMs);
+                        console.log(Math.abs(ageDate.getUTCFullYear() - 1970))
+                        document.getElementById("edad").value = Math.abs(ageDate.getUTCFullYear() - 1970)
+        
+                    }
+                });*/
+       // FechaMaxima()
+        reserMaxima()
+    });
+    function FechaMaxima() {
+        const inputFecha = document.getElementById('fecha');
+
+        const hoy = new Date();
+        const edadLimite = 16;
+
+        // Establecer la fecha máxima (hace 16 años)
+        const fechaMax = new Date(hoy);
+        fechaMax.setFullYear(hoy.getFullYear() - edadLimite);
+
+        // Formatear la fecha en formato yyyy-mm-dd
+        const yyyy = fechaMax.getFullYear();
+        const mm = String(fechaMax.getMonth() + 1).padStart(2, '0');
+        const dd = String(fechaMax.getDate()).padStart(2, '0');
+
+        const fechaMaxString = `${yyyy}-${mm}-${dd}`;
+
+        // Asignar la fecha máxima al campo
+        inputFecha.max = fechaMaxString;
+    }
+    function reserMaxima(){
+         const inputFecha = document.getElementById('reserva');
+
+        const hoy = new Date();
+        const yyyy = hoy.getFullYear();
+        const mm = String(hoy.getMonth() + 1).padStart(2, '0');
+        const dd = String(hoy.getDate()).padStart(2, '0');
+
+        const fechaHoy = `${yyyy}-${mm}-${dd}`;
+        inputFecha.min = fechaHoy;
+    }
+    let fecha = document.getElementById("fecha")
+    fecha.addEventListener("blur", e => {
+        console.log(e.target.value)
+        const value = e.target.value;
+
+        // Expresión regular para validar formato dd/mm/aaaa
+        const regex = /^\d{4}\/\d{2}\/\d{2}$/;
+
+        if (String(value).length != 10) return
+        const birthday_date = new Date(e.target.value);
+        const ageDifMs = Date.now() - birthday_date.getTime();
+        const ageDate = new Date(ageDifMs);
+        const edad = Math.abs(ageDate.getUTCFullYear() - 1970);
+        console.log("Edad:", edad);
+        document.getElementById("edad").value = edad;
+    })
+    fecha.addEventListener("change", e => {
+        //console.log(e.target.value)
+
+        const value = e.target.value;
+
+        // Expresión regular para validar formato dd/mm/aaaa
+        const regex = /^\d{2}\/\d{2}\/\d{4}$/;
+
+        if (!regex.test(value)) return
+
+        const birthday_date = new Date(e.target.value);
+        const ageDifMs = Date.now() - birthday_date.getTime();
+        const ageDate = new Date(ageDifMs);
+        const edad = Math.abs(ageDate.getUTCFullYear() - 1970);
+        console.log("Edad:", edad);
+        document.getElementById("edad").value = edad;
+    })
+</script>
+
+</html>
