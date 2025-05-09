@@ -61,3 +61,5 @@ async function nuevos(e) {
   
 
 }
+console.log("%cDesarrollado por geovannysan\n", "color: blue; font-size: 15px");
+console.log("%cVisita https://github.com/geovannysan\n", "color: blue; font-size: 11px");

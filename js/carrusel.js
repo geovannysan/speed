@@ -81,8 +81,8 @@ $(document).ready(function () {
                 }
             }
         ],
-        nextArrow: '<div class="swiper-button-next" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-b47a45d67edc65b8"></div>',
-        prevArrow: '<div class="swiper-button-prev" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-b47a45d67edc65b8"></div>'
+        nextArrow: '<div class="swiper-button-next" tabindex="0" role="button" aria-label="Previous slide"  aria-hidden="true" aria-controls="swiper-wrapper-b47a45d67edc65b8"></div>',
+        prevArrow: '<div class="swiper-button-prev" tabindex="0" role="button" aria-label="Next slide"  aria-hidden="true" aria-controls="swiper-wrapper-b47a45d67edc65b8"></div>'
     });
 });
 let boton = document.getElementById("btn-consulta")
@@ -356,3 +356,4 @@ function Generar_link_Pago() {
 
 
 }
+
